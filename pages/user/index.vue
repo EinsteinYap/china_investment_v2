@@ -1,11 +1,11 @@
 <template>
-  <view >
+  <view class="user-main ">
     <!-- 页面头部 -->
 	<view class="a-flex a-justify-center a-mx-2">
 	<view class="a-h-280">
 		<view class="a-flex a-justify-center a-align-center a-px-3 no-titleNView autoFixed" style="z-index:99;" :class="isScrolled?'a-bg-primary':''">
 			<text class="a-font-lg a-text-white" v-if="isScrolled">{{$t('pages.user')}}</text>
-			<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2" src="/static/images/ico-set.png"></image>
+			<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2 a-mt-3" src="/static/images/ico-set.png"></image>
 		</view>
 		<view v-if="isLogin" @click="navToAuth('pages/user/bind/setting')" class="a-flex a-align-center a-px-5">
 			<view class="a-w-140 a-h-140">
@@ -102,7 +102,7 @@
 		
 	<view class="a-flex a-justify-center">
 		<view  v-if="isScrolled" class="a-rounded-bottom-2 a-flex a-justify-center a-align-center  no-titleNView  a-position-fixed a-top-0 a-bg-primary a-w-750" style="z-index:99;">
-		<text class="a-font-lg ">{{$t('pages.user')}}</text>
+		<text class="a-font-lg a-text-white">{{$t('pages.user')}}</text>
 		<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2" src="/static/images/ico-set.png"></image>
 	</view>
 	</view>
@@ -515,11 +515,11 @@
 
 <style lang="scss" >
 page{
-	height:100%;
-	background-image: url('@/static/background/user-setting-top-bg.png');
-	background-repeat: no-repeat;
-	background-color: #FFFFFF;
-	background-size: cover;
+	// height:100%;
+	// background-image: url('@/static/background/user-setting-top-bg.png');
+	// background-repeat: no-repeat;
+	// background-color: #FFFFFF;
+	// background-size: cover;
 }
 .marginTop{
 	/* #ifdef APP */
@@ -542,10 +542,34 @@ page{
 .m-tabbar__label {
 	font-size: 28rpx;
 }
-.top-background{
-	background-image: url('@/static/background/user-setting-top-bg.png');
-}
+
 .a-bg-moneybg{
 	background-color: #f5f8fa;
 }
+.user-main{
+	@media only screen and (min-width: 768px) {	
+	background-image: url('/static/user/animated_bg-full.png');
+	background-attachment: fixed;
+	background-size: cover;
+	}
+	@media only screen and (max-width: 767px) {
+	background-image: url('/static/user/animated_bg.png');
+	background-size: cover;
+	background-position: center;
+	animation: backgroundAnimation 5s linear infinite;
+	}
+}
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 100% 100%;
+  }
+  50%{
+	background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
 </style>
