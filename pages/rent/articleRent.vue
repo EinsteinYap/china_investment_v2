@@ -1,11 +1,19 @@
 <template>
 	<view>
-		<swiper class="a-w-750 a-h-400 a-mb-3" style="z-index:1;">
+		<!-- <swiper class="a-w-750 a-h-400 a-mb-3 a-flex a-justify-center" style="z-index:1;">
 			<swiper-item class="a-w-750 a-h-400">
 				<view  class="a-w-750 a-h-400 a-flex a-align-center a-justify-center">
-					<image class="a-w-750 a-position-absolute" mode="widthFix" :src="detail.good_image"></image>
+					<image style="width: 100%;" class=" a-position-absolute"  :src="detail.good_image"></image>
 				</view>
 			</swiper-item>
+		</swiper> -->
+		
+		<swiper class="a-h-400 a-mb-3 a-flex a-justify-center" style="z-index: 1;">
+		  <swiper-item class="a-h-400">
+		    <view class="a-h-400 a-flex a-align-center a-justify-center">
+		      <image class="fill-image" :src="detail.good_image" alt="Image"></image>
+		    </view>
+		  </swiper-item>
 		</swiper>
 		
 		<view class="a-mx-3 a-mb-3 a-rounded-1-5">
@@ -54,21 +62,21 @@
 			<mp-html class="a-text-blue-rent-light" :content="detail.content" />
 		</view>
 		
-		<view class="a-w-750 a-h-100"></view>
-		<view class="a-w-750 a-h-100 a-px-5 a-position-fixed a-bottom-0 a-flex a-justify-center">
+		<view class="a-flex a-justify-center ">
+		<view class="a-w-750 a-h-100 a-px-5 a-position-fixed a-bottom-2 a-flex a-justify-center">
 			<view @click="navToAuth" class="a-bg-brown-orange a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center">
 				<text class="a-font-lg a-font-weight-bold a-text-brown">{{$t('button.rent')}}</text>
 			</view>
 		</view>
-		
+		</view>
 		
 		
 		<u-popup v-model="showPopup" mode="bottom" :closeable="true" :border-radius="26">
-			<view class="a-flex a-bg-white a-w-750 a-overflow-hidden" style="max-height:95vh">
+			<view class="a-flex a-bg-white a-overflow-hidden" style="max-height:95vh">
 				<scroll-view scroll-y class="a-flex-1">
 				<view class="a-mx-3">
 					<view class="a-w-690 a-h-80"></view>
-					<view class="a-flex a-mb-1 a-rounded-1-5">
+					<view class="a-flex a-mb-1 a-rounded-1-5 a-justify-start a-algin-center">
 						<view class="a-w-240 a-h-160 a-rounded-1-5 a-position-relative a-overflow-hidden a-flex a-align-center a-justify-center">
 							<image class="a-w-240 a-h-160 a-rounded-1-5" mode="widthFix" :src="detail.good_image"></image>
 						</view>
@@ -338,11 +346,12 @@
 </script>
 
 <style scoped lang="scss">
-::v-deep uni-rich-text{
-	strong{
-		color:black !important;
+	.fill-image {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
 	}
-}
+
 
 ::v-deep .uni-radio-input,.uni-radio-input-checked{
 	  border-color: black !important ;

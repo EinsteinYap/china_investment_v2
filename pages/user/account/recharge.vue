@@ -12,12 +12,13 @@
 				<text class="a-font-min a-text-white">{{$t('user.paymentGift')}}</text>
 			</view>
 			<!-- #endif -->
-		<u-tabs :list="tabs" :is-scroll="false" :current="curTab" active-color="#ffa200" :duration="0.2"
+		<u-tabs style="background-color: #ffa200;" :list="tabs" :is-scroll="false" :current="curTab" active-color="#333333" :duration="0.2"
 		  @change="onChangeTab" />
 		</u-sticky>
 		
-		
-		<view class="a-flex-column a-justify-center a-px-5 a-w-690 a-mt-5 a-bg-gradual-violet-LR a-rounded-top-2 a-mx-3 a-h-230">
+		<view class="a-flex a-justify-center">
+		<view class="a-flex-column">
+		<view class=" a-flex-column a-justify-center a-px-5 a-w-690 a-mt-5 a-bg-gradual-violet-LR a-rounded-top-2 a-mx-3 a-h-230">
 			<view class="">
 				<text class="a-font a-text-white a-font-weight-bold">{{$t('user.amountMoney')}}</text>
 			</view>
@@ -28,7 +29,7 @@
 		</view>
 		
 		
-		<view class="a-mx-3 a-mb-2 a-bg-orange-yellow-lighter a-w-690 a-py-5 a-rounded-bottom-2">
+		<view class=" a-mx-3 a-mb-2 a-bg-orange-yellow-lighter a-w-690 a-py-5 a-rounded-bottom-2">
 			<view class="a-py-3">
 				<text class="a-font-lg a-font-weight-bold a-pl-4">{{$t('user.amount')}}</text>
 			</view>
@@ -50,8 +51,8 @@
 				<input class="a-rounded-2 a-flex-1 a-bg-gray a-h-90 a-px-4 a-font" type="text" :value="form.custom_money?form.custom_money:''" @input="changeInput" @focus="changeInput" placeholder="Enter the Amount" placeholder-class="a-text-gray-light" />
 			</view>
 		</view>
-		
-		
+		</view>
+		</view>
 		
 		
 		<view class="a-mx-3">

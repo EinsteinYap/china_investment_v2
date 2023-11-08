@@ -44,10 +44,10 @@
 			</view>
 		</view> -->
 		
-		<view  class="">
+		<view class="">
 		
-			<view class="a-flex a-justify-start a-flex-wrap a-rounded-2 a-mt-2">
-				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-690 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-orange-yellow-lighter ">
+			<view class="a-flex a-justify-center a-flex-wrap a-rounded-2 a-mt-2">
+				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-orange-yellow-lighter ">
 					<text class="a-text-ellipsis-1 a-font-max a-font-weight-bold a-text-black a-mb-2">{{item.goods_name}}</text>
 					<view class="a-flex a-align-center">
 					<view class="a-rounded-2 a-position-relative a-overflow-hidden a-flex a-align-center a-justify-center a-flex-1 ">
