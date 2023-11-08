@@ -19,7 +19,7 @@
 			<text class="a-font  a-font-weight-bold a-text-white">{{$t('user.shareHint')}}</text>
 		</view>
 		
-		<view class="a-w-690 a-bg-orange-yellow-baise a-rounded-1-5 a-mx-3 a-mb-3">
+		<view class=" a-bg-orange-yellow-baise a-rounded-1-5 a-mx-3 a-mb-3">
 			<view class="a-flex a-align-center a-mx-4 a-py-2 a-border-bottom a-border-light">
 				<text class="a-font  a-font-weight-bold ">{{$t('user.invitationCode')}}:</text>
 				<text class="a-font-max a-font-weight-bold a-ml-2">{{info.invite_code}}</text>
