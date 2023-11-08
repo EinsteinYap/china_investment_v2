@@ -76,6 +76,7 @@
   @import './common/styles/common.scss';
   @import './uni.scss';
   @import './common/styles/iconfont.scss';
+  @import './common/styles/animated.scss';
   
 </style>
 

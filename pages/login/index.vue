@@ -102,7 +102,6 @@
 		color:#151515;
 		background-image: url('@/static/background/ic_loginbg@3x.png')!important;
 		background-repeat: no-repeat;
-		background-color:#fff !important;
-		background-size: cover;
+		background-color:$uni-bg-color-primary !important;
 	}
 </style>
