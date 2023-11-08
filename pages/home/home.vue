@@ -1,5 +1,6 @@
 <template>
 	<view >
+		<view class="a-flex a-justify-center">
 		<view class="a-w-750 a-flex-column a-justify-end a-position-relative" >
 			<!-- image class="a-w-750 a-position-absolute a-bottom-0" mode="widthFix" src="/static/home/bg-home.png"></image> -->
 			<view class="a-flex a-justify-between a-align-center a-px-3 no-titleNView autoFixed" style="z-index:99;" :class="isScrolled?'a-bg-primary':''">
@@ -27,7 +28,7 @@
 			<view class="a-w-750 a-h-20"></view>
 		</view>
 		
-		<cover-view v-if="isLogin" class="a-w-750 a-flex a-justify-between a-align-center no-titleNView-Cover  a-position-fixed a-top-0 a-left-0" style="z-index:99;"  :class="isScrolled?'a-bg-primary':''">
+		<cover-view v-if="isLogin" class="a-w-750 a-flex a-justify-between a-align-center no-titleNView-Cover  a-position-fixed a-top-0" style="z-index:99;"  :class="isScrolled?'a-bg-primary':''">
 			<cover-view class=" a-ml-3 no-titleNView-Cover-placeholder" style="max-width:350rpx;">
 				<cover-image class="a-w-180 a-h-110" :src="info.app.logo"></cover-image>
 			</cover-view>
@@ -36,15 +37,15 @@
 				<cover-view class="a-text-white a-h-50 a-font-lg a-mb a-position-relative" style="line-height:50rpx;" @click="$navTo('pages/user/bind/language')">{{langeuageName}}</cover-view>
 			</cover-view>
 		</cover-view>
-		
-		<view class="a-flex a-justify-center  a-flex-wrap a-mx-3 a-mb-5" >
+	</view>
+	<view class="a-flex a-justify-center">
+	<view class="a-flex a-justify-center  a-flex-wrap a-mx-3 a-mb-5 a-px-1 a-w-700" >
 			<view v-for="(item,index) in info.menu" :key="index" @click="navToAuth(item.link,index)" 
 			class="
 			a-w-330
 			a-h-120
 			a-mx-1 a-mb-1
 			a-px-4
-			a-py-3 
 			a-flex a-flex-2  a-justify-start a-align-center
 			a-bg-blue-dark-baise a-rounded-1-5"
 			>
@@ -54,7 +55,7 @@
 				<text class="a-font-sm a-text-center">{{item.cname}}</text>
 			</view>
 		</view>
-		
+	</view>
 		
 		<view v-if="info.coupon && info.coupon.length" class="a-mx-3 a-mb-5">
 			<swiper circular class="a-w-690 a-h-160" style="z-index:1;" :next-margin="info.coupon.length<=1?'0':'10px'" >
@@ -129,7 +130,7 @@
 				<image @click="$navTo('pages/home/crowdFunding')" class="a-h-30" mode="heightFix" src="/static/images/lo-more.png"></image>
 			</view>
 			<view class="">
-				<view v-for="(item,index) in info.crowd_funding" @click="$navTo('pages/home/articleFunding?id='+item.id)" class="a-flex a-mt-3 a-bg-gradual-blue-primary-TB a-rounded-1-5 a-w-690 a-h-300 a-px-3 a-py-4">
+				<view v-for="(item,index) in info.crowd_funding" @click="$navTo('pages/home/articleFunding?id='+item.id)" class="a-flex a-mt-3 a-bg-gradual-blue-primary-TB a-rounded-1-5 a-h-300 a-px-3 a-py-4">
 					<view class="a-w-200 a-h-220 a-rounded-1-5 a-position-relative a-overflow-hidden a-flex a-align-center a-justify-center">
 						<image class="a-h-220 a-rounded-1-5" mode="heightFix" :src="item.image_url"></image>
 					</view>

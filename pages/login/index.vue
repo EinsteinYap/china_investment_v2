@@ -96,7 +96,7 @@
     }
   }
 </script>
-<style lang='scss' scoped>
+<style lang='scss'>
 	page {
 		height:100%!important;
 		color:#151515;
