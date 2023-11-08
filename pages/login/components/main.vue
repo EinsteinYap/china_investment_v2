@@ -2,18 +2,18 @@
   <view>
 	
 	<view class="a-flex-column a-align-start a-justify-center a-ml-5">
-		<text class="a-text-white a-font-max a-mt-5 a-font-weight  a-w-250 a-h-100 a-font-max-five a-font-Agbalumo">Sunrun</text>
+		<text class="a-text-white a-font-max a-mt-5 a-font-weight  a-w-250 a-h-100 a-font-max-five a-font-Agbalumo animate__animated animate__bounceInRight animate__delay-2s">Sunrun</text>
 	</view>
-	<view class="a-h-400  a-flex-column a-align-start a-justify-center a-ml-5 a-mt-5" :class="!register? 'a-mt-5 a-mb-10':''">
+	<view class="a-h-400  a-flex-column a-align-start a-justify-center a-ml-5 a-mt-5 animate__animated animate__backInDown animate__delay-1s" :class="!register? 'a-mt-5 a-mb-10':''">
 		<text class="a-text-white a-font-max a-font-weight  a-w-500 a-font-max-ten">Power modern living</text>
 		<text class="a-text-white a-font-max a-mt-2 a-mb-5 a-w-500">Get ahead of your energy needs with cutting-edge solar and home backup. </text>
 	</view>
 	
     <!-- 表单 -->
-    <view class="a-rounded-top-5 a-position-relative a-px-2 " style="margin-top:-50rpx;z-index:2">
+    <view class="a-rounded-top-5 a-position-relative a-px-2" style="z-index:2">
 	  <view v-if="!register" class="a-mx-5 a-overflow-hidden">
 		  <!-- 手机号 -->
-		  <view class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5">
+		  <view v-if="!register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
 			<text class="a-font-sm a-ml-3 a-font-weight-bold">{{$t('form.account')}}</text>
 			<view class="a-pl-2 a-flex a-align-center a-justify-center a-my-2">
 				<text @click="handleShowPopup" class= "a-font">+{{form.areaCodeText}}</text>
@@ -23,7 +23,7 @@
 		  </view>
 		  
 		  <!-- 密码 -->
-		  <view class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5">
+		  <view v-if="!register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
 			<text class="a-font-sm a-ml-3 a-font-weight-bold">{{$t('form.password')}}</text>
 			
 			<input class="a-flex-1 a-bg-gray-light a-h-90 a-rounded-circle a-px-4 a-font" type="text" password v-model="form.password"  :placeholder="$t('placeholder.password')" placeholder-class="a-text-gray-light" />
@@ -31,7 +31,7 @@
 		  
 		  
 		  <!-- 登录按钮 -->
-			<view class="a-mt-4">
+			<view v-if="!register" class="a-mt-4 animate__animated animate__zoomIn animate__delay-1s">
 				<view class="a-bg-gradual-purple-LR a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4" @click="handleLogin">
 					<text class="a-font-lg">{{$t('button.login')}}</text>
 				</view>
@@ -40,16 +40,16 @@
 				</view> -->
 			</view>
 			
-			<view class="a-flex a-justify-center a-mt-3">
+			<view v-if="!register" class="a-flex a-justify-center a-mt-3 animate__animated animate__jackInTheBox animate__delay-3s">
 				<text @click="register = true" class="a-text-white a-mx-7-5">{{$t('button.register')}}</text>
 				<text @click="$navTo('pages/user/bind/password?isForgot=true')" class=" a-text-white">Forgot Password?</text>		  
 			</view>
 		  
 	  </view>
 	  
-	  <view v-else class="a-mx-5 a-overflow-hidden">
+	  <view  v-if="register" class="a-mx-5 a-overflow-hidden">
 		  <!-- 手机号 -->
-		  <view class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5">
+		  <view  v-if="register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__slideInLeft">
 			<text class="a-font-sm a-ml-3 a-font-weight-bold">{{$t('form.account')}}</text>
 			<view class="a-pl-2 a-flex a-align-center a-justify-center a-my-2">
 				<text @click="handleShowPopup" class= "a-font">+{{forms.areaCodeText}}</text>
@@ -59,7 +59,7 @@
 		  </view>
 		  
 		  <!-- 验证码 -->
-		  <view class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5">
+		  <view v-if="register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__slideInRight">
 			  <view class="a-ml-3 a-flex-column a-w-150">
 				  <text class="a-font-sm a-font-weight-bold">{{$t('form.verificationCode')}}</text>
 			  </view>
@@ -72,30 +72,30 @@
 		  </view>
 		  
 		  <!-- 密码 -->
-		  <view class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5">
+		  <view v-if="register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__slideInLeft">
 				<text class="a-font-sm a-ml-3 a-font-weight-bold a-w-150">{{$t('form.password')}}</text>
 				<input class="a-flex-1 a-bg-gray-light a-h-90 a-rounded-circle a-px-4 a-font" type="text" v-model="forms.password"  :placeholder="$t('placeholder.password')" placeholder-class="a-text-gray-light" />
 		  </view>
 		  
 		  <!-- 邀请码 -->
-		  <view v-if="!source.staffId" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5">
+		  <view v-if="!source.staffId && register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__slideInRight">
 		  	<view class="a-ml-3 a-flex-column a-w-150">
 			  <text class="a-font-sm  a-font-weight-bold">{{$t('form.invitationCode')}}</text>
 		  	</view>
 			<input class="a-flex-1 a-bg-gray-light a-h-90 a-rounded-circle a-px-4 a-font" type="text" v-model="forms.inviteCode"  :placeholder="$t('placeholder.invite')" placeholder-class="a-text-gray-light" />
 		  </view>
-		  <label class="a-flex a-mt-3 a-align-center" @tap="changeRadio">
+		  <label class="a-flex a-mt-3 a-align-center animate__animated animate__slideInLeft" @tap="changeRadio">
 				<radio style="transform:scale(0.7)" color="#FFA200" :checked="checked"></radio>
 				<text class="a-text-white a-font-sm " @click="$navTo('pages/user/bind/agreement')">{{$t('user.agreement')}}</text>
 		  </label>
 		  <!-- 登录按钮 -->
-		<view class="a-mt-4">
-			<view class="a-bg-gradual-purple-LR a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4" @click="handleRegister">
+		<view v-if="register" class="a-mt-4 ">
+			<view class="a-bg-gradual-purple-LR a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4 animate__animated animate__rotateInDownRight" @click="handleRegister">
 				<text class="a-font">{{$t('button.register')}}</text>
 			</view>
 			
 		</view>
-		<view class="a-flex a-justify-center a-mt-3 a-mb-4">
+		<view v-if="register" class="a-flex a-justify-center a-mt-3 a-mb-4 animate__animated animate__rotateInDownLeft">
 			<text @click="register = false" class="a-text-white a-mx-7-5">{{$t('button.login')}}</text>	  
 		</view>
 		  
