@@ -1,6 +1,7 @@
 <template>
   <view >
     <!-- 页面头部 -->
+	<view class="a-flex a-justify-center a-mx-2">
 	<view class="a-h-280">
 		<view class="a-flex a-justify-center a-align-center a-px-3 no-titleNView autoFixed" style="z-index:99;" :class="isScrolled?'a-bg-primary':''">
 			<text class="a-font-lg a-text-white" v-if="isScrolled">{{$t('pages.user')}}</text>
@@ -35,6 +36,7 @@
 				<text class="a-font a-text-white"></text>
 			</view>
 		</view>
+	</view>
 	</view>
 	<!-- first row data start -->
 		<view class="a-flex a-align-center a-justify-center a-mx-2 a-mb-3 a-h-100 a-pt-5" >
@@ -98,14 +100,16 @@
 		</view> -->
 
 		
-	<view v-if="isScrolled" class="a-flex a-justify-center a-align-center a-px-3 no-titleNView  a-position-fixed a-top-0 a-bg-primary" style="z-index:99;">
-		<text class="a-font-lg a-text-white">{{$t('pages.user')}}</text>
+	<view class="a-flex a-justify-center">
+		<view  v-if="isScrolled" class="a-rounded-bottom-2 a-flex a-justify-center a-align-center  no-titleNView  a-position-fixed a-top-0 a-bg-primary a-w-750" style="z-index:99;">
+		<text class="a-font-lg ">{{$t('pages.user')}}</text>
 		<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2" src="/static/images/ico-set.png"></image>
+	</view>
 	</view>
 	
 	
 	
-	<view class="a-bg-white  a-w-750 a-rounded-top-5">
+	<view class="a-bg-white  a-rounded-top-5">
 		<view class="a-flex a-align-start a-justify-around  a-mx-1 a-pt-5 a-pb-2 a-mb-2" >
 			<view @click="navToAuth('pages/user/account/recharge')" class="a-flex-column a-flex-1 a-align-center">
 				<view>
@@ -216,11 +220,11 @@
 	
 	<POPUP :showPopup="popup.isShow" :ok="popup.ok" :cancel="popup.cancel" :content="popup.content" :title="popup.title" @cancel="cancelPopup" @sure="surePopup"></POPUP>
 	<!-- #ifdef APP-PLUS -->
-  <view class="a-w-750 a-h-40 a-bg-gray-light"> 	
+  <view class="a-h-40 a-bg-gray-light"> 	
   </view>
 	<!-- #endif -->
 	<!-- #ifdef H5 -->
-	<view class="a-w-750 a-h-200 a-bg-gray-light"> 	
+	<view class="a-h-200 a-bg-gray-light"> 	
 	</view>
 		<!-- #endif -->
   </view>
