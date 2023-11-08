@@ -1,0 +1,643 @@
+{
+  "tabBar": {
+    "color": "#d3d3d3",
+    "selectedColor": "#FFA200",
+    "borderStyle": "black",
+    "backgroundColor": "white",
+	"height": "80px",
+	"iconWidth": "35px",
+	"fontSize": "15px",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "iconPath": "static/tabbar/home.png",
+      "selectedIconPath": "static/tabbar/home-active.png",
+      "text":"%tabbar.home%"
+    }, {
+      "pagePath": "pages/rent/rent",
+      "iconPath": "static/tabbar/rent.png",
+      "selectedIconPath": "static/tabbar/rent-active.png",
+      "text": "%tabbar.rent%"
+    }, {
+      "pagePath": "pages/income/income",
+      "iconPath": "static/tabbar/income.png",
+      "selectedIconPath": "static/tabbar/income-active.png",
+      "text": "%tabbar.income%"
+    }, {
+      "pagePath": "pages/share/share",
+      "iconPath": "static/tabbar/share.png",
+      "selectedIconPath": "static/tabbar/share-active.png",
+      "text": "%tabbar.share%"
+    }, {
+      "pagePath": "pages/user/index",
+      "iconPath": "static/tabbar/user.png",
+      "selectedIconPath": "static/tabbar/user-active.png",
+      "text": "%tabbar.user%"
+    }]
+  },
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+          "path" : "pages/home/home",
+          "style" :                                                                                    
+          {
+              "navigationBarTitleText": "%pages.home%",
+              "enablePullDownRefresh": true,
+              "navigationStyle": "custom"
+          }
+          
+      },
+	  {
+      "path": "pages/index/index",
+      "style": {
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/category/index",
+      "style": {
+        "navigationBarTitleText": "全部分类"
+      }
+    },
+    {
+      "path": "pages/cart/index",
+      "style": {
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "%pages.user%",
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom",
+		"backgroundColor": "#F8F8F8"
+      }
+    },
+    {
+      "path": "pages/custom/index",
+      "style": {
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/search/index",
+      "style": {
+        "navigationBarTitleText": "商品搜索"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        // "navigationBarTitleText": "%pages.login%",
+		"navigationBarBackgroundColor": "#141A93",
+		"navigationBarTextStyle": "white",
+		"navigationStyle": "custom"
+		// "app-plus": {
+		// 	"titleNView": false
+		// }
+      }
+    },
+    {
+      "path": "pages/user/bind/index",
+      "style": {
+        "navigationBarTitleText": "绑定手机"
+      }
+    },
+    {
+      "path": "pages/article/index",
+      "style": {
+        "navigationBarTitleText": "资讯列表"
+      }
+    },
+    {
+      "path": "pages/article/detail",
+      "style": {
+        "navigationBarTitleText": "资讯详情"
+      }
+    },
+    {
+      "path": "pages/help/index",
+      "style": {
+        "navigationBarTitleText": "帮助中心"
+      }
+    },
+    {
+      "path": "pages/coupon/index",
+      "style": {
+        "navigationBarTitleText": "领券中心"
+      }
+    },
+    {
+      "path": "pages/goods/list",
+      "style": {
+        "navigationBarTitleText": "商品列表",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/goods/detail",
+      "style": {
+        "navigationBarTitleText": "商品详情页"
+      }
+    },
+    {
+      "path": "pages/comment/index",
+      "style": {
+        "navigationBarTitleText": "商品评价页"
+      }
+    },
+    {
+      "path": "pages/my-coupon/index",
+      "style": {
+        "navigationBarTitleText": "我的优惠券"
+      }
+    },
+    {
+      "path": "pages/address/index",
+      "style": {
+        "navigationBarTitleText": "收货地址"
+      }
+    },
+    {
+      "path": "pages/address/create",
+      "style": {
+        "navigationBarTitleText": "新增收货地址"
+      }
+    },
+    {
+      "path": "pages/address/update",
+      "style": {
+        "navigationBarTitleText": "编辑收货地址"
+      }
+    },
+    {
+      "path": "pages/points/log",
+      "style": {
+        "navigationBarTitleText": "账单明细"
+      }
+    },
+    {
+      "path": "pages/wallet/index",
+      "style": {
+        "navigationBarTitleText": "我的钱包"
+      }
+    },
+    {
+      "path": "pages/wallet/balance/log",
+      "style": {
+        "navigationBarTitleText": "账单详情"
+      }
+    },
+    {
+      "path": "pages/wallet/recharge/index",
+      "style": {
+        "navigationBarTitleText": "充值中心"
+      }
+    },
+    {
+      "path": "pages/wallet/recharge/order",
+      "style": {
+        "navigationBarTitleText": "充值记录"
+      }
+    },
+    {
+      "path": "pages/checkout/index",
+      "style": {
+        "navigationBarTitleText": "订单结算台"
+      }
+    },
+    {
+      "path": "pages/order/index",
+      "style": {
+        "navigationBarTitleText": "我的订单",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/order/detail",
+      "style": {
+        "navigationBarTitleText": "订单详情",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#e8c269"
+      }
+    },
+    {
+      "path": "pages/order/express/index",
+      "style": {
+        "navigationBarTitleText": "物流跟踪"
+      }
+    },
+    {
+      "path": "pages/order/comment/index",
+      "style": {
+        "navigationBarTitleText": "订单评价"
+      }
+    },
+    {
+      "path": "pages/refund/index",
+      "style": {
+        "navigationBarTitleText": "退换/售后"
+      }
+    },
+    {
+      "path": "pages/refund/detail",
+      "style": {
+        "navigationBarTitleText": "售后详情"
+      }
+    },
+    {
+      "path": "pages/refund/apply",
+      "style": {
+        "navigationBarTitleText": "申请售后"
+      }
+    }
+      
+        ,{
+            "path" : "pages/income/income",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.income%",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "black"
+				
+            }
+            
+        }
+        ,{
+            "path" : "pages/share/share",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.share%",
+                "enablePullDownRefresh": false,
+				"titleNView": true,
+				"backgroundColor": "#F8F8F8"
+            }
+            
+        }
+        ,{
+            "path" : "pages/rent/rent",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.rent%",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "black"
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/language",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.language%",
+                "enablePullDownRefresh": false
+            }
+        }
+        ,{
+            "path" : "pages/webView/webView",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/rent/articleRent",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.detail%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+		    "path" : "pages/rent/homearticleRent",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "%pages.detail%",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/share/turntable",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.luckySpin%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/setting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.setings%",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "black"
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/password",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.password%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/myBill",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.myBill%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/redEnvelope",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.redEnvelope%",
+                "enablePullDownRefresh": false,
+				"backgroundColor": "#F8F8F8"
+            }
+            
+        }
+		,{
+            "path" : "pages/redEnvelope/redEnvelope",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.redEnvelope%",
+                "enablePullDownRefresh": false,
+				"backgroundColor": "#F8F8F8"
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/coupon",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.coupon%",
+                "enablePullDownRefresh": false,
+				"backgroundColor": "#F8F8F8"
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/myFriend",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.myFriend%",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/user/bind/servicetg",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "%pages.servicetg%",
+		        "enablePullDownRefresh": false,
+				 "navigationBarTitleText": "Service complaints"
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/user/bind/about",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.aboutUs%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/myTasks",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.myTasks%",
+                "enablePullDownRefresh": false,
+				"backgroundColor": "#F8F8F8"
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/uploadTask",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.uploadTask%",
+                "enablePullDownRefresh": false,
+				"backgroundColor": "#F8F8F8"
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/download",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.appDownload%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/account/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.withdrawAccount%",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "black"
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/account/form",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.form%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/account/recharge",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.recharge%",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue625",
+							"fontSrc": "/static/font/iconfont.ttf",
+							"fontSize": "24px",
+							"float": "right",
+							"color":"#fd8008"
+						}]
+					}
+				}
+				
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/account/recordRecharge",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.rechargeRecord%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/account/withdraw",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.withdraw%",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue625",
+							"fontSrc": "/static/font/iconfont.ttf",
+							"fontSize": "24px",
+							"float": "right",
+							"color":"#fd8008"
+						}]
+					}
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/account/recordWithdraw",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.withdrawRecord%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/productActivities",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.productActivities%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/crowdFunding",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.crowdFunding%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/task/taskCenter",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.taskCenter%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/task/articleTask",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.detail%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/news/newsCenter",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.newsCenter%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/news/articleNews",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.detail%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/account/payment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.payment%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/agreement",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.agreement%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/articleActivities",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.bargain%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/bind/crowdfunding",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "%pages.crowdFunding%",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/articleFunding",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+  "globalStyle": {
+    // #ifdef H5
+    // "navigationStyle": "custom",
+    "maxWidth": 750,
+    "rpxCalcMaxDeviceWidth": 750, // rpx 计算所支持的最大设备宽度，单位 px，默认值为 960
+    "rpxCalcBaseDeviceWidth": 560, // rpx 计算使用的基准设备宽度，设备实际宽度超出 rpx 计算所支持的最大设备宽度时将按基准宽度计算，单位 px，默认值为 375
+    "rpxCalcIncludeWidth": 9999, // rpx 计算特殊处理的值，始终按实际的设备宽度计算，单位 rpx，默认值为 750
+    // #endif
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "",
+    "backgroundTextStyle": "dark",
+	"backgroundColor": "#FFFFFF",
+	"navigationBarTextStyle": "black"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+    }
+  }
+}

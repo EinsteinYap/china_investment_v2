@@ -1,0 +1,93 @@
+/* 行为相关颜色 */
+$uni-color-primary: #232324;
+$uni-color-primary-font:#1B30A9;
+$uni-color-primary-blue-dark:#1B22EB;
+$uni-color-primary-blue-dark-card:#0B13B5;
+$uni-color-primary-intersperse: #efa043;
+$uni-color-yellow-orange:#FFB403;
+$uni-color-primary-light:#DED1FF;
+$uni-color-primary-lighter:#F1F1FE;
+$uni-color-white: #ffffff;
+$uni-color-red:#E83426;
+$uni-color-red-light:#fcedeb;
+$uni-color-pink:#fba27e;
+$uni-color-pink-light:#fcedeb;
+$uni-color-pink-dark:#ff5775;
+$uni-color-orange: #FFA200;
+$uni-color-orange-gold:#FFC004;
+$uni-color-orange-light:#FFF9E9;
+$uni-color-orange-lighter:#FFF6EC;
+$uni-color-orange-yellow:#FFE8B4;
+$uni-color-yellow:#F4E681;
+$uni-color-green: #67d0af;
+$uni-color-green-light: #eafaed;
+$uni-color-cyan: #64b9b2;
+$uni-color-blue:#7dbaf9;
+$uni-color-blue-view:#1921E9;
+$uni-color-blue-view-light:#1219E6;
+$uni-color-blue-rent:#1820E7;
+$uni-color-blue-rent-light:#F1F1FE;
+$uni-color-blue-light:#d9f6ff;
+$uni-color-blue-dark:#205787;
+$uni-color-blue-laser:#121AE3;
+$uni-color-blue-sea-light:#72BDFC;
+$uni-color-blue-sea:#2C8FF7;
+$uni-color-blue-sea-dark:#0F17BE;
+$uni-color-purple:#9169F3;
+$uni-color-purple-light:#f4f4fe;
+$uni-color-purple-blue:#331DF2;
+$uni-color-brown:#000000;
+// $uni-color-brown:#9D390E;
+$uni-color-brown-light:#DA6D40;
+$uni-color-brown-dark:#512C19;
+$uni-color-brown-darker:#642610;
+$uni-color-brown-orange:#EDC475;
+$uni-color-brown-orange-light:#FFFFFF;
+$uni-color-gold:#FFD707;
+$uni-color-gold-yellow:#FFD006;
+/* 文字基本颜色 */
+$uni-text-color-black:#151515;
+$uni-text-color-gray:#9E9AA8;
+$uni-text-color-gray-light:#BEBEBE;
+
+/* 背景颜色 */
+$uni-bg-color-black:#222222;
+$uni-bg-color-black-light:#3C3C3C;
+$uni-bg-color-black-lighter:#9D96B1;
+$uni-bg-color-gray:#f5f5f5;
+$uni-bg-color-gray-light:#F1F1FE;
+$uni-bg-color-gray-dark:#d4d9de;
+
+/* 边框颜色 */
+$uni-border-color:#dedede;
+$uni-border-light:#eeeeee;
+$uni-border-lighter:#fafafa;
+$uni-border-dark:#999999;
+$uni-border-black:#222222;
+$uni-border-orange-yellow:#FFE8B4;
+
+/* 文字尺寸 */
+$uni-font-size-tiny:16rpx;
+$uni-font-size-min:20rpx;
+$uni-font-size-sm:24rpx;
+$uni-font-size-lt:26rpx;
+$uni-font-size-base:28rpx;
+$uni-font-size-lg:32rpx;
+$uni-font-size-max:36rpx;
+$uni-font-size-max-one:40rpx;
+$uni-font-size-max-two:44rpx;
+$uni-font-size-max-three:48rpx;
+$uni-font-size-max-four:52rpx;
+$uni-font-size-max-five:56rpx;
+$uni-font-size-max-six:60rpx;
+$uni-font-size-max-seven:64rpx;
+$uni-font-size-max-eight:68rpx;
+$uni-font-size-max-nine:72rpx;
+$uni-font-size-max-ten:76rpx;
+
+
+//原系统
+$uni-text-color-active:#fa2209; // 激活的颜色红
+
+/* 引入uView全局scss变量文件 */
+@import "uview-ui/theme.scss";
