@@ -2,12 +2,13 @@
 	<view>
 		<mescroll-body ref="mescrollRef" :sticky="true" @init="mescrollInit" :down="{ use: false }" :up="upOption"
 		@up="upCallback">
+		<view class="a-flex a-justify-center">
 		<view class="a-flex-column a-justify-center a-align-center a-px-5 a-w-690 a-mt-5  a-rounded-top-2 a-mx-3 a-h-230">
 			<image class="a-w-690 a-h-230 a-position-absolute" src="/static/background/bg-recordRecharge.png"></image>
 			<text class="a-font a-text-yellow-orange a-font-weight-bold" style="z-index:1;">{{$t('user.amountBalance')}}</text>
 			<text class="a-font-max-two a-text-brown a-font-weight-bold a-mt-1" style="z-index:1;">{{balance}} Rs</text>
 		</view>
-		
+		</view>
 		<view class="a-mx-3 a-pb-3 a-bg-orange-yellow-lighter a-rounded-2 ">
 			<view v-for="(item,index) in list.data" :key="index" class="  a-mt-2 a-px-3 a-py-4 forms-border-bottom">
 				<view class="a-flex a-align-center a-justify-between">
