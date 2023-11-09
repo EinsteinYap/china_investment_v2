@@ -3,15 +3,15 @@
 		<mescroll-body ref="mescrollRef" :sticky="true" @init="mescrollInit" :down="{ use: true,auto:false }" :up="upOption"
 		@up="upCallback" @down="downCallback">
 		
-		<view class="a-mx-3  a-mt-4 a-bg-white a-px-3 a-pt-3 a-rounded-2 ">
+		<view class="a-mx-3  a-mt-4 a-bg-primary-op-3 a-px-3 a-pt-3 a-rounded-2 ">
 			<view v-for="(item,index) in list.data" :key="index" @click="$navTo('pages/news/articleNews?id='+item.article_id)" class="a-flex a-align-center a-pb-3 forms-border-bottom ">
 				<view class="a-w-180 a-h-120 a-ml-2 a-rounded-1-5 a-position-relative a-overflow-hidden a-flex a-align-center a-justify-center ">
 					<image class="a-h-120 a-rounded-1-5" mode="heightFix" :src="item.image_url"></image>
 				</view>
 				<view class="a-flex-column a-px-2 a-py-1 a-flex-1">
-					<text class="a-text-ellipsis-1 a-font a-text-black  a-font-weight-bold">{{item.title}}</text>
-					<text class="a-text-black a-font-sm a-mt a-text-ellipsis-2">{{item.synopsis}}</text>
-					<text class="a-text-black a-mt-1 a-font-sm">{{item.add_time}}</text>
+					<text class="a-text-ellipsis-1 a-font a-text-white  a-font-weight-bold">{{item.title}}</text>
+					<text class="a-text-white a-font-sm a-mt a-text-ellipsis-2">{{item.synopsis}}</text>
+					<text class="a-text-white a-mt-1 a-font-sm">{{item.add_time}}</text>
 				</view>
 			</view>
 		</view>

@@ -7,26 +7,26 @@
 				</view>
 			</view>
 			
-			<view class="a-mt-3 a-bg-orange-yellow-lighter a-rounded-1-5 a-mx-3">
+			<view class="a-mt-3 a-bg-primary-op-3 a-rounded-1-5 a-mx-3">
 				
 				<view class="a-p-3 a-flex-column">
-					<text class=" a-font a-font-weight-bold a-font-max-three">{{detail.title}}</text>
+					<text class=" a-font a-font-weight-bold a-font-max-three a-text-white">{{detail.title}}</text>
 					<text class=" a-font-max a-text-orange a-mt-2">{{detail.amount}} Rs</text>
 					<!-- <view class="a-flex a-align-center a-justify-between a-mt-2">
 						<text class="a-text-gray a-font-sm">{{$t('pro.purchaseLimit')}}:</text>
 						<text class="a-text-gray a-font-sm">{{item.limit_num}}</text>
 					</view> -->
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class=" a-font-sm">{{$t('pro.projectBenefits')}}:</text>
-						<text class=" a-font-sm">{{detail.profit_rate}}%</text>
+						<text class=" a-font-sm a-text-white">{{$t('pro.projectBenefits')}}:</text>
+						<text class=" a-font-sm a-text-white">{{detail.profit_rate}}%</text>
 					</view>
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class=" a-font-sm">{{$t('pro.leastInvest')}}:</text>
-						<text class=" a-font-sm">{{detail.min_buy_amount}}Rs</text>
+						<text class=" a-font-sm a-text-white">{{$t('pro.leastInvest')}}:</text>
+						<text class=" a-font-sm a-text-white">{{detail.min_buy_amount}}Rs</text>
 					</view>
 					
 					<view class="a-w-600 a-mt-2">
-						<PROGRESS v-if="detail.rate" isAnimate duration="1000" :percentage="detail.rate" strokeWidth="5" bgColor="#FFA200" inBgColor="#000000" fontColor="#000000"></PROGRESS>
+						<PROGRESS v-if="detail.rate" isAnimate duration="1000" :percentage="detail.rate" strokeWidth="5" bgColor="#FFA200" inBgColor="#000000" fontColor="#ffffff"></PROGRESS>
 					</view>
 					
 				</view>

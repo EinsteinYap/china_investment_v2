@@ -7,22 +7,26 @@
 				</view>
 		</view>
 			
-		<view class="a-flex a-align-center a-justify-center a-position-relative a-mb-5  a-rounded-2 " >
+		<view class="a-flex a-align-center a-justify-center a-position-relative a-mb-2  a-rounded-2 " >
 				<view class=" a-w-750 a-h-300 a-flex-column a-justify-center ">
-					<image src="/static/share/or-hakim-c7lvKHVea9A-unsplash.jpg" class="a-w-750"></image>
+					<image src="/static/share/invite-friends.gif" class="a-w-750"></image>
+				
 				</view>
+				
 		</view>
-		
+		<view class="a-flex a-justify-center a-align-center" style="z-index: 1;">
+		<text class="a-text-gold a-font-max-three">Invite Friends and earn togather!</text>
+		</view>
 		
 		
 		<view class="a-flex a-justify-center a-mb-3">
 			<text class="a-font  a-font-weight-bold a-text-white">{{$t('user.shareHint')}}</text>
 		</view>
 		
-		<view class=" a-bg-orange-yellow-baise a-rounded-1-5 a-mx-3 a-mb-3">
+		<view class="a-bg-primary-op-3 a-rounded-1-5 a-mx-3 a-mb-3">
 			<view class="a-flex a-align-center a-mx-4 a-py-2 a-border-bottom a-border-light">
-				<text class="a-font  a-font-weight-bold ">{{$t('user.invitationCode')}}:</text>
-				<text class="a-font-max a-font-weight-bold a-ml-2">{{info.invite_code}}</text>
+				<text class="a-font  a-font-weight-bold a-text-white">{{$t('user.invitationCode')}}:</text>
+				<text class="a-font-max a-font-weight-bold a-ml-2 a-text-white">{{info.invite_code}}</text>
 				<view @click="copy(info.invite_code)" class="a-bg-gradual-blue-primary-LR a-px-2 a-py a-rounded-circle a-ml-2">
 					<text class="a-font a-text-white">{{$t('button.copy')}}</text>
 				</view>
@@ -33,7 +37,7 @@
 						<image class="a-w-220 a-h-220" :src="info.qrcode"></image>
 					</view>
 					<view class="a-flex a-align-center">
-						<text class="a-flex-1 a-font  a-font-weight-bold">{{$t('user.shareLink')}}</text>
+						<text class="a-flex-1 a-font  a-font-weight-bold a-text-white">{{$t('user.shareLink')}}</text>
 						<text class="a-flex-3  a-text-gray a-text-ellipsis-3 a-mt-1 a-mb-2">{{info.link}}</text>
 					</view>
 					<view @click="copy(info.link)" class="a-bg-gradual-blue-primary-LR a-px-2 a-py a-rounded-circle">

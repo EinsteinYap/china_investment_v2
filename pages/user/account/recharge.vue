@@ -12,7 +12,7 @@
 				<text class="a-font-min a-text-white">{{$t('user.paymentGift')}}</text>
 			</view>
 			<!-- #endif -->
-		<u-tabs style="background-color: #ffa200;" :list="tabs" :is-scroll="false" :current="curTab" active-color="#333333" :duration="0.2"
+		<u-tabs style="background-color: #ffa200 !important;" :list="tabs" :is-scroll="false" :current="curTab" active-color="#333333" :duration="0.2"
 		  @change="onChangeTab" />
 		</u-sticky>
 		
@@ -29,11 +29,11 @@
 		</view>
 		
 		
-		<view class=" a-mx-3 a-mb-2 a-bg-orange-yellow-lighter a-w-690 a-py-5 a-rounded-bottom-2">
+		<view class=" a-mx-3 a-mb-2 a-bg-primary-op-3 a-w-690 a-py-5 a-rounded-bottom-2">
 			<view class="a-py-3">
-				<text class="a-font-lg a-font-weight-bold a-pl-4">{{$t('user.amount')}}</text>
+				<text class="a-font-lg a-font-weight-bold a-pl-4 a-text-white">{{$t('user.amount')}}</text>
 			</view>
-			<view class="a-flex a-align-center a-flex-wrap a-bg-orange-yellow-lighter a-rounded-2 a-w-690 a-h-670 a-pl-1">
+			<view class="a-flex a-align-center a-flex-wrap a-bg-primary-op-3 a-rounded-2 a-w-690 a-h-670 a-pl-1">
 				<view v-for="(item,index) in payplan" :key="index" @click="changePlan(index)" class="a-flex-column a-align-center a-justify-center a-w-180 a-h-160 a-rounded-2 a-position-relative a-mb-2 a-mx-2" :class="active==index?'a-bg-orange-yellow':'a-bg-gray'">
 					<view v-if="curTab ==0" class="a-w-50 a-h-50 a-rounded-circle a-bg-orange a-flex a-align-center a-justify-center">
 						<text class="a-text-white a-font">₹</text>
@@ -47,7 +47,7 @@
 				</view>
 			</view>
 			<view class="a-flex a-align-center a-rounded-1-5 a-h-90 a-mt-2 a-pr-4-5">
-				<text class="a-font a-ml-3 a-font-weight-bold a-pl-4-5 a-pr-3">{{$t('user.otherAmount')}}</text>
+				<text class="a-font a-ml-3 a-font-weight-bold a-pl-4-5 a-pr-3 a-text-white">{{$t('user.otherAmount')}}</text>
 				<input class="a-rounded-2 a-flex-1 a-bg-gray a-h-90 a-px-4 a-font" type="text" :value="form.custom_money?form.custom_money:''" @input="changeInput" @focus="changeInput" placeholder="Enter the Amount" placeholder-class="a-text-gray-light" />
 			</view>
 		</view>
@@ -59,11 +59,11 @@
 			<view class="a-py-3">
 				<text class="a-font-lg a-font-weight-bold a-text-white">{{$t('user.channel')}}</text>
 			</view>
-			<view class="a-mt-2 a-bg-primary-lighter a-rounded-2">
+			<view class="a-mt-2 a-bg-primary-op-3 a-rounded-2">
 				<radio-group>
 					<label v-for="(item,index) in payment" :key='index' @tap='payItem(index)' class="a-flex a-justify-between a-align-center a-h-100 a-border-light" :class="index !=0?'a-border-top':''">
 						<view class="a-flex a-align-center">
-							<text class="a-font a-ml-2">{{item.pay_name}}</text>
+							<text class="a-font a-ml-2 a-text-white">{{item.pay_name}}</text>
 						</view>
 						<radio color="#ffa200" :checked="form.payment_id==item.id"></radio>
 					</label>

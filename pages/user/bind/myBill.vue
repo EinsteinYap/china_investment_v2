@@ -9,18 +9,18 @@
 			<text class="a-font-max-two a-text-brown a-font-weight-bold a-mt-1" style="z-index:1;">{{balance}} Rs</text>
 		</view>
 		</view>
-		<view class="a-mx-3 a-pb-3 a-bg-orange-yellow-lighter a-rounded-2 ">
+		<view class="a-mx-3 a-pb-3 a-bg-primary-op-3 a-rounded-2 ">
 			<view v-for="(item,index) in list.data" :key="index" class="  a-mt-2 a-px-3 a-py-4 forms-border-bottom">
 				<view class="a-flex a-align-center a-justify-between">
-					<text class="a-font-max-one a-text-black">{{item.cate_label}}</text>
+					<text class="a-font-max-one a-text-white">{{item.cate_label}}</text>
 					<view class="a-flex a-align-end">
-						<text class="a-font-lg a-text-brown">{{item.money}}</text>
-						<text class="a-font a-text-brown a-ml">Rs</text>
+						<text class="a-font-lg a-text-white">{{item.money}}</text>
+						<text class="a-font a-text-white a-ml">Rs</text>
 					</view>
 				</view>
 				<view class="a-flex a-align-center a-justify-between a-mt-2">
-					<text class="a-font-sm a-text-black a-flex-1 a-text-ellipsis-1">{{$t('user.orderNumber')}}:{{item.order_no}}</text>
-					<text class="a-font-sm a-text-black a-ml-2">{{item.add_time}}</text>
+					<text class="a-font-sm a-text-white a-flex-1 a-text-ellipsis-1">{{$t('user.orderNumber')}}:{{item.order_no}}</text>
+					<text class="a-font-sm a-text-white a-ml-2">{{item.add_time}}</text>
 				</view>
 			</view>
 	

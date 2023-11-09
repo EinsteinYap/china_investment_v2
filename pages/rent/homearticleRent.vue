@@ -8,31 +8,31 @@
 			</swiper-item>
 		</swiper>
 		
-		<view class="a-mx-3 a-mb-3 a-bg-primary-lighter a-rounded-1-5">
+		<view class="a-mx-3 a-mb-3 a-bg-primary-op-3 a-rounded-1-5">
 			<view class="a-p-3">
 				<text class="a-text-ellipsis-1 a-font a-text-orange  a-font-weight-bold">{{detail.goods_name}}</text>
 				<view class="a-flex a-align-center a-justify-between a-mt-2">
-					<text class="a-text-gray a-font-sm">{{$t('pro.amount')}}:</text>
-					<text class="a-text-gray a-font-sm">{{detail.goods_price}} Rs</text>
+					<text class="a-text-white a-font-sm">{{$t('pro.amount')}}:</text>
+					<text class="a-text-white a-font-sm">{{detail.goods_price}} Rs</text>
 				</view>
 				<view v-if="detail.settle_model !=3" class="a-flex a-align-center a-justify-between a-mt-2">
-					<text class="a-text-gray a-font-sm">{{$t('pro.dailyIncome')}}:</text>
-					<text class="a-text-gray a-font-sm">{{detail.daily_income}} Rs</text>
+					<text class="a-text-white a-font-sm">{{$t('pro.dailyIncome')}}:</text>
+					<text class="a-text-white a-font-sm">{{detail.daily_income}} Rs</text>
 				</view>
 				<view class="a-flex a-align-center a-justify-between a-mt-2">
-					<text class="a-text-gray a-font-sm">{{$t('pro.incomeCycle')}}:</text>
-					<text class="a-text-gray a-font-sm">{{detail.total_day}} Days</text>
+					<text class="a-text-white a-font-sm">{{$t('pro.incomeCycle')}}:</text>
+					<text class="a-text-white a-font-sm">{{detail.total_day}} Days</text>
 				</view>
 				<view class="a-flex a-align-center a-justify-between a-mt-2">
-					<text class="a-text-gray a-font-sm">{{$t('pro.totalIncome')}}:</text>
-					<text class="a-text-gray a-font-sm">{{detail.total_profit}} Rs</text>
+					<text class="a-text-white a-font-sm">{{$t('pro.totalIncome')}}:</text>
+					<text class="a-text-white a-font-sm">{{detail.total_profit}} Rs</text>
 				</view>
 				<view class="a-flex a-align-center a-justify-between a-mt-2">
-					<text class="a-text-gray a-font-sm">{{$t('pro.purchaseLimit')}}:</text>
-					<text class="a-text-gray a-font-sm">{{detail.limit_num}}</text>
+					<text class="a-text-white a-font-sm">{{$t('pro.purchaseLimit')}}:</text>
+					<text class="a-text-white a-font-sm">{{detail.limit_num}}</text>
 				</view>
 				<view v-if="detail.expire_time" class="a-flex a-align-center a-justify-between a-mt-2">
-					<text class="a-text-gray a-font-sm">{{$t('pro.eventcountdown')}}:</text>
+					<text class="a-text-white a-font-sm">{{$t('pro.eventcountdown')}}:</text>
 					<view class="a-flex a-justify-between a-align-center">
 						<uni-countdown color="#FFFFFF" background-color="#571fb2" :show-day="false" :hour="$countdown(detail.expire_time,'hour')" :minute="$countdown(detail.expire_time,'minute')" :second="$countdown(detail.expire_time,'second')"></uni-countdown>
 						<!-- <uni-countdown v-else-if="!item.countdown" color="#FFFFFF" background-color="#555555" :show-day="false" :hour="0" :minute="0" :second="0"></uni-countdown> -->
@@ -84,7 +84,7 @@
 						</view>
 					</view>
 					
-				  <view class="a-mb-1 a-bg-primary-lighter a-rounded-1-5">
+				  <view class="a-mb-1 a-bg-primary-op-3 a-rounded-1-5">
 					
 					<view class="a-p-2">
 						<text class="a-text-ellipsis-1 a-font a-text-orange  a-font-weight-bold">{{detail.goods_name}}</text>

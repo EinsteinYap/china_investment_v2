@@ -9,14 +9,14 @@
 		</u-sticky>
 		
 		<view class="a-mx-3">
-			<view v-for="(item,index)  in list.data" :key="index" @click="$navTo('pages/home/articleFunding?id='+item.id)" class="a-mt-3 a-bg-orange-yellow-lighter a-rounded-2 a-h-970 a-w-690 a-flex-column a-align-center a-justify-center">
+			<view v-for="(item,index)  in list.data" :key="index" @click="$navTo('pages/home/articleFunding?id='+item.id)" class="a-mt-3 a-bg-primary-op-3 a-rounded-2 a-h-970 a-w-690 a-flex-column a-align-center a-justify-center">
 				<view class="a-w-690 a-h-430 a-rounded-top-2 a-position-relative a-overflow-hidden">
 					<view  class="a-w-690 a-h-430   a-flex a-align-center a-justify-center">
 						<image class="a-w-750  a-position-absolute" mode="widthFix" :src="item.image_url"></image>
 					</view>
 				</view>
 				<view class="a-flex-column a-mx-3 a-mt-5 a-w-600 a-justify-center">
-					<text class=" a-font a-text-primary">{{item.title}}</text>
+					<text class=" a-font a-text-white">{{item.title}}</text>
 					<text class=" a-font-max a-text-orange a-mt-2">{{item.amount}} Rs</text>
 					<!-- <view class="a-flex a-align-center a-justify-between a-mt-2">
 						<text class="a-text-gray a-font-sm">{{$t('pro.purchaseLimit')}}:</text>
@@ -27,7 +27,7 @@
 						<text class="a-text-blue-sea-light a-font-sm">{{item.profit_rate}}%</text>
 					</view>
 					<view class="a-flex-1 a-mt-2">
-						<PROGRESS isAnimate duration="1000" :percentage="item.rate" strokeWidth="5" bgColor="#FFA200" inBgColor="#0B13B5" fontColor="#0B13B5"></PROGRESS>
+						<PROGRESS isAnimate duration="1000" :percentage="item.rate" strokeWidth="5" bgColor="#FFA200" inBgColor="#ffffff" fontColor="#ffffff"></PROGRESS>
 					</view>
 					<view class="a-flex a-justify-center a-mx-auto a-my-3 a-w-500">
 						<view class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">

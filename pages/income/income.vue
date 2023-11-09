@@ -1,9 +1,9 @@
 <template>
-	<view>
+	<view class="income-page">
 		<mescroll-body ref="mescrollRef" :sticky="true" @init="mescrollInit" :down="{ use: true,auto:false }" :up="upOption"
 		@up="upCallback" @down="downCallback">
 		
-		<view class="a-flex a-align-center a-justify-start  a-w-690 a-h-100 a-mt-2 a-rounded-1-5 a-overflow-hidden">
+		<view class="a-flex a-align-center a-justify-start  a-mt-2 a-rounded-1-5 a-overflow-hidden">
 	<!-- 		<image class="a-w-690 a-h-230 a-position-absolute" src="/static/income/bg-income.png"></image> -->
 			<view class="a-px-5" style="z-index:1">
 				<text class="a-font a-font-weight-bold a-font-max a-text-white">{{$t('user.totalInvestment')}}</text>
@@ -12,33 +12,33 @@
 		</view>
 		
 		<view class="a-mx-3 a-mb-5 a-rounded-2">
-			<view v-for="(item,index) in list.data" @click="$navTo('pages/user/bind/myBill')" class="a-mt-3 a-bg-primary-lighter a-rounded-2 a-border a-border-primary">
+			<view v-for="(item,index) in list.data" @click="$navTo('pages/user/bind/myBill')" class="a-mt-3 a-bg-primary-op-3 a-rounded-2 a-border a-border-primary">
 				<!-- <view class="a-flex-1 a-rounded-2 a-position-relative a-overflow-hidden">
 					<view class="a-w-690 a-h-420   a-flex a-align-center a-justify-center">
 						<image class="a-w-690  a-position-absolute" mode="widthFix" :src="item.order_goods?item.order_goods.goods_image:''"></image>
 					</view>
 				</view> -->
 				<view class="a-p-3">
-					<text class="a-text-ellipsis-1 a-font-max a-text-black a-font-weight-bold">{{item.goods_name}}</text>
+					<text class="a-text-ellipsis-1 a-font-max a-text-white a-font-weight-bold">{{item.goods_name}}</text>
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-black a-font-sm">{{$t('pro.investmentAmount')}}:</text>
-						<text class="a-text-black a-font-sm">{{item.total_price}} Rs</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.investmentAmount')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.total_price}} Rs</text>
 					</view>
 					
 					<view v-if="item.order_goods.settle_model != 3" class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-black a-font-sm">{{$t('pro.income')}}:</text>
-						<text class="a-text-black a-font-sm">{{item.total_profit}} Rs</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.income')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.total_profit}} Rs</text>
 					</view>
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-black a-font-sm">{{$t('pro.purchaseTime')}}:</text>
-						<text class="a-text-black a-font-sm">{{item.buy_day}}</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.purchaseTime')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.buy_day}}</text>
 					</view>
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-black a-font-sm">{{$t('pro.endTime')}}:</text>
-						<text class="a-text-black a-font-sm">{{item.end_day}}</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.endTime')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.end_day}}</text>
 					</view>
 					<view v-if="item.countdown" class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-black a-font-sm">{{$t('pro.nextSettlement')}}:</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.nextSettlement')}}:</text>
 						<view class="a-flex a-justify-between a-align-center">
 							<uni-countdown v-if="item.countdown" color="#FFFFFF" background-color="#fd8008" :show-day="false" :hour="$countdown(item.countdown,'hour')" :minute="$countdown(item.countdown,'minute')" :second="$countdown(item.countdown,'second')"></uni-countdown>
 							<!-- <uni-countdown v-if="!item.countdown" color="#FFFFFF" background-color="#555555" :show-day="false" :hour="0" :minute="0" :second="0"></uni-countdown> -->
@@ -207,5 +207,12 @@
 }
 .m-tabbar__label {
 	font-size: 28rpx;
+}
+.income-page{
+	background-image: url('@/static/income/income_growth.png');
+	background-size:500rpx 500rpx;
+	background-repeat: no-repeat !important;
+	background-position: center;
+	background-attachment: fixed;
 }
 </style>

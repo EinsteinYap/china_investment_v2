@@ -1,15 +1,15 @@
 <template>
 	<view class="a-px-4">
-		<view class="a-w-670 a-flex-column a-align-center a-justify-center a-py-5 a-bg-orange-yellow-lighter a-mt-4 a-rounded-2">
-			<text class="a-font-max-three a-font-weight-bold">{{detail.usdt_num}} USDT</text>
-			<text class="a-font a-mt-2 a-font-weight-bold">{{$t('user.paymentHint')}}</text>
+		<view  class="a-w-670 a-flex-column a-align-center a-justify-center a-py-5 a-bg-primary-op-3 a-mt-4 a-rounded-2">
+			<text class="a-font-max-three a-font-weight-bold a-text-white">{{detail.usdt_num}} USDT</text>
+			<text class="a-font a-mt-2 a-font-weight-bold a-text-white">{{$t('user.paymentHint')}}</text>
 			<text class="a-font a-text-yellow-orange a-mt-1 a-font-weight-bold">{{detail.usdt_num}} USDT{{detail.gift_money?' + '+detail.gift_money+' USDT':''}}</text>
 			<view class="a-border-dotted a-border a-border-black a-p-1 a-mt-5">
-				<image class="a-w-400 a-h-400" :src="qrcode"></image>
+				<image class="a-w-400 a-h-400" style="filter: invert(100%);" :src="qrcode"></image>
 			</view>
 			<text class="a-font a-text-yellow-orange a-font-weight-bold a-mt-3">{{$t('user.paymentTitle')}}</text>
 			<view class="a-mt-3 a-mx-5 a-flex a-align-center">
-				<text class="a-font a-text-gray a-flex-1 a-text-ellipsis-1">{{detail.address}}</text>
+				<text class="a-font a-text-gray a-flex-1 a-text-ellipsis-1 a-text-white">{{detail.address}}</text>
 				<image @click="copy(detail.address)" class="a-w-40 a-h-40 a-ml-2" src="/static/images/ico-copy.png"></image>
 			</view>
 		</view>

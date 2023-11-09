@@ -1,5 +1,5 @@
 <template>
-	<view >
+	<view class="rent-page">
 		<mescroll-body ref="mescrollRef" :sticky="true" @init="mescrollInit" :down="{ use: true,auto:false }" :up="upOption"
 		@up="upCallback" @down="downCallback">
 		
@@ -47,8 +47,8 @@
 		<view class="">
 		
 			<view class="a-flex a-justify-center a-flex-wrap a-rounded-2 a-mt-2">
-				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-orange-yellow-lighter ">
-					<text class="a-text-ellipsis-1 a-font-max a-font-weight-bold a-text-black a-mb-2">{{item.goods_name}}</text>
+				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-primary-op-3 ">
+					<text class="a-text-ellipsis-1 a-font-max a-font-weight-bold a-text-white a-mb-2">{{item.goods_name}}</text>
 					<view class="a-flex a-align-center">
 					<view class="a-rounded-2 a-position-relative a-overflow-hidden a-flex a-align-center a-justify-center a-flex-1 ">
 						<view  class="a-w-250 a-h-180  a-flex a-align-center a-justify-center a-rounded-2 ">
@@ -61,23 +61,23 @@
 					<view class="a-flex-column a-p-2 a-flex-2">
 						
 						<view class="a-flex a-align-center a-justify-between">
-						<text class="a-text-black a-font-sm">{{$t('pro.totalPrice')}}:</text>
-						<text class="a-text-black a-font-sm">{{item.goods_price}} Rs</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.totalPrice')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.goods_price}} Rs</text>
 						</view>
 						<view class="a-flex a-align-center a-justify-between">
-						<text class="a-text-black a-font-sm">{{$t('pro.circulation')}}:</text>
-						<text class="a-text-black a-font-sm">{{item.total_day}} Days</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.circulation')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.total_day}} Days</text>
 						</view>
 						<view class="a-flex a-align-center a-justify-between">
-						<text class="a-text-black a-font-sm">{{$t('pro.dailyIncome')}}:</text>
-						<text class="a-text-black a-font-sm">{{item.daily_income}} Rs</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.dailyIncome')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.daily_income}} Rs</text>
 						</view>
 						<view class="a-flex a-align-center a-justify-between">
-						<text class="a-text-black a-font-sm">{{$t('pro.totalIncome')}}:</text>
-						<text class="a-text-black a-font-sm">{{item.total_profit}} Rs</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.totalIncome')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.total_profit}} Rs</text>
 						</view>
 						<view class="a-flex a-align-center a-justify-between">
-						<text class="a-text-black a-font-sm"></text>
+						<text class="a-text-white a-font-sm"></text>
 						</view>
 						<view v-if="item.expire_time" class="a-flex a-align-center a-justify-between a-mt-2">
 							<text class="a-text-gray a-font-sm">{{$t('pro.eventcountdown')}}:</text>
@@ -194,5 +194,13 @@
 }
 .m-tabbar__label {
 	font-size: 28rpx;
+}
+
+.rent-page{
+	background-image: url('@/static/rent/business-rent.png');
+	background-size:500rpx 500rpx;
+	background-repeat: no-repeat !important;
+	background-position: center;
+	background-attachment: fixed;
 }
 </style>

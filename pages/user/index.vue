@@ -5,14 +5,14 @@
 	<view class="a-h-280">
 		<view class="a-flex a-justify-center a-align-center a-px-3 no-titleNView autoFixed" style="z-index:99;" :class="isScrolled?'a-bg-primary':''">
 			<text class="a-font-lg a-text-white" v-if="isScrolled">{{$t('pages.user')}}</text>
-			<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2 a-mt-3" src="/static/images/ico-set.png"></image>
+			<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2 a-mt-3 animate__animated animate__rotateIn animate__slow animate__infinite" src="/static/images/ico-set.png"></image>
 		</view>
 		<view v-if="isLogin" @click="navToAuth('pages/user/bind/setting')" class="a-flex a-align-center a-px-5">
 			<view class="a-w-140 a-h-140">
-				<avatar-image  :url="userInfo.avatar" :width="140" />
+				<avatar-image class="animate__animated animate__rollIn" :url="userInfo.avatar" :width="140" />
 				<!-- <image class="a-w-140 a-h-140" :src="userInfo.avatar?userInfo.avatar:'/static/images/avatar.png'"></image> -->
 			</view>
-			<view class="a-flex-1 a-mx-4">
+			<view class="a-flex-1 a-mx-4 animate__animated animate__jackInTheBox">
 				<view class="a-flex a-align-center a-mb-2">
 					<text class="a-font-max a-font-weight-bold a-text-white">{{userInfo.mobile}}</text>
 					<view v-if="userInfo.grade" class="a-px-2 a-h-40 a-flex a-align-center a-bg-orange a-rounded-circle a-ml-2">
@@ -39,7 +39,7 @@
 	</view>
 	</view>
 	<!-- first row data start -->
-		<view class="a-flex a-align-center a-justify-center a-mx-2 a-mb-3 a-h-100 a-pt-5" >
+		<view class="a-flex a-align-center a-justify-center a-mx-2 a-mb-3 a-h-100 a-pt-5 animate__animated animate__zoomInLeft animate__delay-1s" >
 			<view class="a-flex-column  a-px-2 a-align-center ">
 				<view class="a-flex a-align-end  a-mb-2">
 					<text class="a-font-max a-font-weight-bold a-text-gold a-text-ellipsis-1">{{assets.balance?assets.balance:'0'}}</text>
@@ -63,7 +63,7 @@
 			</view>		
 		</view>
 		<!-- second row data -->
-		<view class="a-flex a-align-center a-justify-center a-mx-2 a-mb-3 a-pt-5" >
+		<view class="a-flex a-align-center a-justify-center a-mx-2 a-mb-3 a-pt-5 animate__animated animate__zoomInRight animate__delay-1s" >
 			<view class="a-flex-column  a-px-2 a-align-center ">
 				<view class="a-flex a-align-end  a-mb-2">
 					<text class="a-font-max a-font-weight-bold a-text-gold a-text-ellipsis-1">{{assets.team_income?assets.team_income:'0'}}</text>
@@ -103,31 +103,31 @@
 	<view class="a-flex a-justify-center">
 		<view  v-if="isScrolled" class="a-rounded-bottom-2 a-flex a-justify-center a-align-center  no-titleNView  a-position-fixed a-top-0 a-bg-primary a-w-750" style="z-index:99;">
 		<text class="a-font-lg a-text-white">{{$t('pages.user')}}</text>
-		<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2" src="/static/images/ico-set.png"></image>
+		<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2 animate__animated animate__rotateIn" src="/static/images/ico-set.png"></image>
 	</view>
 	</view>
 	
 	
 	
-	<view class="a-bg-white  a-rounded-top-5">
+	<view style="width: 90%;" class="a-bg-primary-op-5 a-mx-auto  a-rounded-top-5 animate__animated animate__bounceInUp animate__delay-1s">
 		<view class="a-flex a-align-start a-justify-around  a-mx-1 a-pt-5 a-pb-2 a-mb-2" >
-			<view @click="navToAuth('pages/user/account/recharge')" class="a-flex-column a-flex-1 a-align-center">
+			<view @click="navToAuth('pages/user/account/recharge')" class="a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInLeft animate__delay-2s">
 				<view>
 					<image class="a-w-50 a-h-50" src="/static/user/cz.png"></image>
 				</view>
-				<text class="a-font-sm a-text-center a-font-weight-bold">{{$t('user.recharge')}}</text>
+				<text class="a-font-sm a-text-center a-font-weight-bold a-text-white">{{$t('user.recharge')}}</text>
 			</view>
-			<view @click="navToAuth('pages/user/account/withdraw')" class="a-flex-column a-flex-1 a-align-center">
+			<view @click="navToAuth('pages/user/account/withdraw')" class="a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInLeft animate__delay-2s">
 				<view>
 					<image class="a-w-50 a-h-50" src="/static/user/tx.png"></image>
 				</view>
-				<text class="a-font-sm a-font-weight-bold">{{$t('user.withdraw')}}</text>
+				<text class="a-font-sm a-font-weight-bold a-text-white">{{$t('user.withdraw')}}</text>
 			</view>
-			<view @click="navToAuth('pages/user/bind/myBill')" class="a-flex-column a-flex-1 a-align-center">
+			<view @click="navToAuth('pages/user/bind/myBill')" class="a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInRight animate__delay-2s">
 				<view>
 					<image class="a-w-50 a-h-50" src="/static/user/zd.png"></image>
 				</view>
-				<text class="a-font-sm a-font-weight-bold">{{$t('user.myBill')}}</text>
+				<text class="a-font-sm a-font-weight-bold a-text-white">{{$t('user.myBill')}}</text>
 			</view>
 			<!-- <view @click="navToAuth('pages/user/bind/redEnvelope')" class="a-flex-column a-flex-1 a-align-center">
 				<view>
@@ -135,87 +135,88 @@
 				</view>
 				<text class="a-font-sm a-text-center a-font-weight-bold">{{$t('user.redEnvelope')}}</text>
 			</view> -->
-			<view @click="navToAuth('pages/share/turntable')" class="a-flex-column a-flex-1 a-align-center">
+			<view @click="navToAuth('pages/share/turntable')" class="a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInRight animate__delay-2s">
 				<view>
 					<image class="a-w-50 a-h-50" src="/static/user/dzp.png"></image>
 				</view>
-				<text class="a-font-sm a-font-weight-bold">{{$t('user.luckyWheel')}}</text>
+				<text class="a-font-sm a-font-weight-bold a-text-white">{{$t('user.luckyWheel')}}</text>
 			</view>
 			
 		</view>
+		
 	<view class="a-border-top a-flex a-align-center a-justify-between a-mx-5 a-py-2 " @click="$navTo('pages/user/bind/coupon')">
 		<view class="a-flex a-align-center a-mt-2">
 			<image class="a-w-50 a-h-50" src="/static/user/yhj.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">{{$t('user.coupon')}}</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white">{{$t('user.coupon')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white"></text>
 	</view>	
 		
 	<view class="a-flex a-align-center a-justify-between a-mx-5 a-py-2" @click="$navTo('pages/user/bind/myFriend')">
 		<view class="a-flex a-align-center">
 			<image class="a-w-50 a-h-50" src="/static/user/td.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">{{$t('user.myFriend')}}</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white">{{$t('user.myFriend')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white"></text>
 	</view>	
 	<view class="a-flex a-align-center a-justify-between a-mx-5 a-py-3" @click="$navTo('pages/user/account/index')">
 		<view class="a-flex a-align-center">
 			<image class="a-w-50 a-h-50" src="/static/user/yhk.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">{{$t('user.bankAccount')}}</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white">{{$t('user.bankAccount')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white"></text>
 	</view>
 	<view class="a-flex a-align-center a-justify-between a-mx-5 a-py-3" @click="$navTo('pages/user/bind/myTasks')">
 		<view class="a-flex a-align-center">
 			<image class="a-w-50 a-h-50" src="/static/user/rw.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">{{$t('user.myTasks')}}</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white">{{$t('user.myTasks')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white "></text>
 	</view>
 	<view class="a-flex a-align-center a-justify-between a-mx-5 a-py-3" @click="$navTo('pages/user/bind/about')">
 		<view class="a-flex a-align-center">
 			<image class="a-w-50 a-h-50" src="/static/user/gy.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">{{$t('user.aboutUs')}}</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white a-text-white">{{$t('user.aboutUs')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white a-text-white"></text>
 	</view>
 	<view class="a-flex a-align-center a-justify-between a-mx-5 a-py-3" @click="$navTo('pages/user/bind/crowdfunding')">
 		<view class="a-flex a-align-center">
 			<image class="a-w-50 a-h-50" src="/static/user/zc.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">{{$t('home.crowdFunding')}}</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white">{{$t('home.crowdFunding')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white"></text>
 	</view>
 	
 	<view class="a-flex a-align-center a-justify-between a-mx-5 a-py-3" @click="$navTo('pages/user/bind/servicetg')">
 		<view class="a-flex a-align-center">
 			<image class="a-w-50 a-h-50" src="/static/user/kf.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">Complaints and Suggestions</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white">{{$t('user.ComplaintSuggestions')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white"></text>
 	</view>
 	
 	<!-- #ifdef H5 -->
 	<view class="a-flex a-align-center a-justify-between a-mx-5 a-py-3" @click="$navTo('pages/user/bind/download')">
 		<view class="a-flex a-align-center">
 			<image class="a-w-50 a-h-50" src="/static/user/xz.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">{{$t('user.download')}}</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white">{{$t('user.download')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white"></text>
 	</view>
 	<!-- #endif -->
 	<view v-if="isLogin" class="a-flex a-align-center a-justify-between a-mx-5 a-pt-3 a-pb-6" @click="handleLogout()">
 		<view class="a-flex a-align-center">
 			<image class="a-w-50 a-h-50" src="/static/user/tc.png"></image>
-			<text class="a-font-sm a-ml-2 a-font-weight-bold">{{$t('user.logout')}}</text>
+			<text class="a-font-sm a-ml-2 a-font-weight-bold a-text-white">{{$t('user.logout')}}</text>
 		</view>
-		<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+		<text class="iconfonts icon-ai-arrow-down a-text-white"></text>
 	</view>
 		
 	</view>
 
 	<view @click="goCustomer" class="a-bg-blue-view-home-tancang a-flex a-p-2 a-rounded-circle-left a-position-fixed a-right-0" style="bottom:400rpx;">
-		<image class="a-w-50 a-h-50" src="/static/images/ico-service.png"></image>
+		<image class="a-w-50 a-h-50 animate__animated animate__heartBeat animate__slow animate__infinite" src="/static/images/ico-service.png"></image>
 	</view>
 	
 	<POPUP :showPopup="popup.isShow" :ok="popup.ok" :cancel="popup.cancel" :content="popup.content" :title="popup.title" @cancel="cancelPopup" @sure="surePopup"></POPUP>

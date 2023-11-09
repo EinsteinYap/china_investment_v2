@@ -39,7 +39,7 @@
 		</cover-view>
 	</view>
 	<view class="a-flex a-justify-center">
-	<view class="a-flex a-justify-center  a-flex-wrap a-mx-3 a-mb-5 a-px-1 a-w-700" >
+	<view class="a-flex a-justify-center  a-flex-wrap a-mx-3 a-mb-5 a-px-1 a-py-2 a-w-700" >
 			<view v-for="(item,index) in info.menu" :key="index" @click="navToAuth(item.link,index)" 
 			class="
 			a-w-330
@@ -47,12 +47,15 @@
 			a-mx-1 a-mb-1
 			a-px-4
 			a-flex a-flex-2  a-justify-start a-align-center
-			a-bg-blue-dark-baise a-rounded-1-5"
+			a-rounded-1-5
+			box
+			
+			"
 			>
 				<view class="a-w-60 a-h-60 a-mb-1 a-mr-3" >
 					<image class="a-w-60 a-h-60 " :src="item.image_url"></image>
 				</view>
-				<text class="a-font-sm a-text-center">{{item.cname}}</text>
+				<text class="a-font-sm a-text-center a-text-white">{{item.cname}}</text>
 			</view>
 		</view>
 	</view>
@@ -156,14 +159,14 @@
 			</view>
 			
 			<view class="">
-				<view v-for="(item,index) in info.task" :key="index" @click="$navTo('pages/task/articleTask?id='+item.id)" class="a-flex a-align-center a-bg-white cards-first-last-border-radius  forms-border-bottom">
+				<view v-for="(item,index) in info.task" :key="index" @click="$navTo('pages/task/articleTask?id='+item.id)" class="a-flex a-align-center a-bg-primary-op-3 cards-first-last-border-radius  forms-border-bottom">
 					
-					<view class="a-flex-column a-px-2 a-py-1 a-flex-1 a-py-3 a-px-3">
-						<text class="a-text-black a-font-lg a-font-weight-bold a-text-ellipsis-1 a-mb-2">{{item.title}}</text>
-						<text class="a-text-black a-font a-text-ellipsis-2">{{item.synopsis}}</text>
+					<view class="a-flex-column a-px-2 a-py-1 a-flex-1 a-py-3 a-px-3 box">
+						<text class="a-text-white a-font-lg a-font-weight-bold a-text-ellipsis-1 a-mb-2">{{item.title}}</text>
+						<text class="a-text-white a-font a-text-ellipsis-2">{{item.synopsis}}</text>
 						<view class="a-flex a-align-center a-justify-between">
-							<text class="a-font-max-three a-text-black a-font-weight-bold ">{{item.award_money}} Rs</text>
-							<text class="a-font-sm a-text-black">{{item.end_time_label}}</text>
+							<text class="a-font-max-three a-text-white a-font-weight-bold ">{{item.award_money}} Rs</text>
+							<text class="a-font-sm a-text-white">{{item.end_time_label}}</text>
 						</view>
 					</view>
 				</view>
@@ -180,21 +183,21 @@
 				<image  @click="$navTo('pages/news/newsCenter')" class="a-h-30" mode="heightFix" src="/static/images/lo-more.png"></image>
 			</view>
 			<view class="">
-				<view v-for="(item,index) in info.news" :key="index" @click="$navTo('pages/news/articleNews?id='+item.article_id)" class="a-flex a-align-center a-bg-white cards-first-last-border-radius  forms-border-bottom">
+				<view v-for="(item,index) in info.news" :key="index" @click="$navTo('pages/news/articleNews?id='+item.article_id)" class="a-flex a-align-center a-bg-primary-op-3 cards-first-last-border-radius  forms-border-bottom">
 					<view class="a-w-200 a-h-200 a-ml-2 a-rounded-1-5 a-position-relative a-overflow-hidden a-flex a-align-center a-justify-center">
 						<image class="a-h-120 a-w-180 a-rounded-1-5" mode="heightFix" :src="item.image_url"></image>
 					</view>
 					<view class="a-flex-column a-px-2 a-py-1 a-flex-1">
-						<text class="a-text-ellipsis-1 a-font a-font-weight-bold a-text-black">{{item.title}}</text>
-						<text class="a-text-black a-font-sm a-mt a-text-ellipsis-2">{{item.synopsis}}</text>
-						<text class="a-text-black a-font-sm a-mt">{{item.add_time}}</text>
+						<text class="a-text-ellipsis-1 a-font a-font-weight-bold a-text-white">{{item.title}}</text>
+						<text class="a-text-white a-font-sm a-mt a-text-ellipsis-2">{{item.synopsis}}</text>
+						<text class="a-text-white a-font-sm a-mt">{{item.add_time}}</text>
 					</view>
 				</view>
 			</view>
 		</view>
 		
 		<view @click="goCustomer" class="a-bg-blue-view-home-tancang a-flex a-p-2 a-rounded-circle-left a-position-fixed a-right-0" style="bottom:400rpx;">
-			<image class="a-w-50 a-h-50" src="/static/images/ico-service.png"></image>
+			<image class="a-w-50 a-h-50 animate__animated animate__heartBeat animate__slow animate__infinite" src="/static/images/ico-service.png"></image>
 		</view>
 		
 		<u-popup v-model="showPopup" mode="center" class="app-pop-up-m">
@@ -499,4 +502,14 @@
 	   padding-right: 30rpx;
 }
 /* #endif */
+
+
+.box{
+	background-color: rgba(79, 79, 71, 0.3);
+}
+
+::v-deep .u-notice-text.u-type-warning br{
+  display: none !important;
+}
+
 </style>
