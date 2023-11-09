@@ -9,7 +9,7 @@
 			
 		<view class="a-flex a-align-center a-justify-center a-position-relative a-mb-2  a-rounded-2 " >
 				<view class=" a-w-750 a-h-300 a-flex-column a-justify-center ">
-					<image src="/static/share/invite-friends.gif" class="a-w-750"></image>
+					<image src="/static/share/invite-friends.jpg" class="a-w-750"></image>
 				
 				</view>
 				
@@ -24,7 +24,7 @@
 		</view>
 		
 		<view class="a-bg-primary-op-3 a-rounded-1-5 a-mx-3 a-mb-3">
-			<view class="a-flex a-align-center a-mx-4 a-py-2 a-border-bottom a-border-light">
+			<view class="a-flex a-align-center a-mx-4 a-py-2 a-border-bottom ">
 				<text class="a-font  a-font-weight-bold a-text-white">{{$t('user.invitationCode')}}:</text>
 				<text class="a-font-max a-font-weight-bold a-ml-2 a-text-white">{{info.invite_code}}</text>
 				<view @click="copy(info.invite_code)" class="a-bg-gradual-blue-primary-LR a-px-2 a-py a-rounded-circle a-ml-2">
@@ -215,5 +215,8 @@ page{
 		line-height: 50rpx ;
 		background-color: transparent;
 		color: #72BDFC;
+	}
+	.a-border-bottom{
+		border-color:#4b4b4b !important ;
 	}
 </style>

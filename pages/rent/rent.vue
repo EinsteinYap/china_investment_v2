@@ -46,8 +46,10 @@
 		
 		<view class="">
 		
-			<view class="a-flex a-justify-center a-flex-wrap a-rounded-2 a-mt-2">
-				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-primary-op-3 ">
+			<view class="a-flex a-justify-center a-flex-wrap a-rounded-2 a-mt-2 animate__animated animate__backInDown animate__delay-1s
+						
+						">
+				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-primary-op-7-5 ">
 					<text class="a-text-ellipsis-1 a-font-max a-font-weight-bold a-text-white a-mb-2">{{item.goods_name}}</text>
 					<view class="a-flex a-align-center">
 					<view class="a-rounded-2 a-position-relative a-overflow-hidden a-flex a-align-center a-justify-center a-flex-1 ">
@@ -198,7 +200,7 @@
 
 .rent-page{
 	background-image: url('@/static/rent/business-rent.png');
-	background-size:500rpx 500rpx;
+	background-size:800rpx 800rpx;
 	background-repeat: no-repeat !important;
 	background-position: center;
 	background-attachment: fixed;

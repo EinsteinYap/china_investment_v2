@@ -1529,6 +1529,9 @@ page {
   .a-bg-primary-op-5{
   	  background-color: rgba(79, 79, 71, 0.5);
   }
+  .a-bg-primary-op-7-5{
+  	  background-color: rgba(79, 79, 71, 0.75);
+  }
 /* 边框 */
 .a-border {
   border-width: 1rpx!important;
@@ -2460,11 +2463,11 @@ page {
 	bottom: 0;
 	left: 5%; /* Adjust the left position as needed */
 	width: 90%; /* Set the width to 90% */
-	border-bottom: 3rpx solid #dedede; /* Set the style and color as needed */
+	border-bottom: 3rpx solid #4b4b4b; /* Set the style and color as needed */
 	}
 	   &:last-child {
 	      &::after {
-	      	border-bottom: 0rpx solid #58ACFA; /* Set the style and color as needed */
+	      	border-bottom: 0rpx;/* Set the style and color as needed */
 	      	}
 	    }
 }	

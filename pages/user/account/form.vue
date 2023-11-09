@@ -1,61 +1,61 @@
 <template>
 	<view>
 		<view class="a-mx-5 a-overflow-hidden">
-			<view v-if="form.cateid==2" class=" forms-border-bottom a-flex a-align-center a-rounded-top-1-5 a-bg-orange-yellow-lighter a-h-90 a-mt-5">
+			<view v-if="form.cateid==2" class=" forms-border-bottom a-flex a-align-center a-rounded-top-1-5 a-bg-primary-op-3 a-h-90 a-mt-5">
 				<view class="a-ml-3 a-flex-column a-w-200">
-					<text class="a-font a-font-weight-bold">{{$t('form.name')}}</text>
+					<text class="a-font a-font-weight-bold a-text-white">{{$t('form.name')}}</text>
 				</view>
-				<input class="a-flex-1 a-bg-orange-yellow-lighter a-h-90 a-px-4 a-font a-rounded-top-1-5" type="text" v-model="form.user_name" :placeholder="$t('placeholder.name')" placeholder-class="a-text-gray-light" />
+				<input class="a-flex-1  a-h-90 a-px-4 a-font a-rounded-top-1-5 a-text-white" type="text" v-model="form.user_name" :placeholder="$t('placeholder.name')" placeholder-class="a-text-gray-light" />
 			</view>
 			
-			<view v-if="form.cateid==2" class=" forms-border-bottom a-flex a-align-center a-bg-orange-yellow-lighter a-h-90">
+			<view v-if="form.cateid==2" class=" forms-border-bottom a-flex a-align-center a-bg-primary-op-3 a-h-90">
 				<view class="a-ml-3 a-flex-column a-w-200">
-					<text class="a-font a-font-weight-bold">{{$t('form.mobile')}}</text>
+					<text class="a-font a-font-weight-bold a-text-white">{{$t('form.mobile')}}</text>
 				</view>
-				<input class="a-flex-1 a-bg-orange-yellow-lighter a-h-90 a-px-4 a-font a-rounded-1-5" type="text" v-model="form.mobile" :placeholder="$t('placeholder.phone')" placeholder-class="a-text-gray-light" />
+				<input class="a-flex-1  a-h-90 a-px-4 a-font a-rounded-1-5 a-text-white" type="text" v-model="form.mobile" :placeholder="$t('placeholder.phone')" placeholder-class="a-text-gray-light" />
 			</view>
 			
-			<view v-if="form.cateid==2" class=" forms-border-bottom a-flex a-align-center a-bg-orange-yellow-lighter a-h-90">
+			<view v-if="form.cateid==2" class=" forms-border-bottom a-flex a-align-center a-bg-primary-op-3 a-h-90">
 				<view class="a-ml-3 a-flex-column a-w-200">
-					<text class="a-font a-font-weight-bold">{{$t('form.bankAccount')}}</text>
+					<text class="a-font a-font-weight-bold a-text-white">{{$t('form.bankAccount')}}</text>
 				</view>
-				<input class="a-flex-1 a-bg-orange-yellow-lighter a-h-90 a-px-4 a-font" type="text" v-model="form.bank_card_number" :placeholder="$t('placeholder.bankCard')" placeholder-class="a-text-gray-light" />
+				<input class="a-flex-1  a-h-90 a-px-4 a-font a-text-white" type="text" v-model="form.bank_card_number" :placeholder="$t('placeholder.bankCard')" placeholder-class="a-text-gray-light" />
 			</view>
 			
-			<view v-if="form.cateid==2" class="forms-border-bottom a-flex a-align-center a-bg-orange-yellow-lighter a-h-90">
+			<view v-if="form.cateid==2" class="forms-border-bottom a-flex a-align-center a-bg-primary-op-3 a-h-90">
 				<view class="a-ml-3 a-flex-column a-w-200">
-					<text class="a-font a-font-weight-bold">IFSC</text>
+					<text class="a-font a-font-weight-bold a-text-white">IFSC</text>
 				</view>
-				<input class="a-flex-1 a-bg-orange-yellow-lighter a-h-90 a-px-4 a-font a-rounded-1-5" type="text" v-model="form.ifsc" :placeholder="$t('placeholder.IFSC')" placeholder-class="a-text-gray-light" />
+				<input class="a-flex-1  a-h-90 a-px-4 a-font a-rounded-1-5 a-text-white" type="text" v-model="form.ifsc" :placeholder="$t('placeholder.IFSC')" placeholder-class="a-text-gray-light" />
 			</view>
 			
-			<view v-if="form.cateid==1" class=" forms-border-bottom a-bg-orange-yellow-lighter a-rounded-top-1-5 a-pb-2 a-mt-2 a-pt-2">
+			<view v-if="form.cateid==1" class=" forms-border-bottom a-bg-primary-op-3 a-rounded-top-1-5 a-pb-2 a-mt-2 a-pt-2">
 				<view class="a-ml-3 a-flex-column  ">
-					<text class=" a-font a-font-weight-bold">{{$t('form.address')}}</text>
+					<text class=" a-font a-font-weight-bold a-text-white">{{$t('form.address')}}</text>
 				</view>
 				
 			</view>
-			  <view v-if="form.cateid==1" class=" forms-border-bottom a-bg-orange-yellow-lighter a-pt-2">
+			  <view v-if="form.cateid==1" class=" forms-border-bottom a-bg-primary-op-3 a-pt-2">
 			  	<view class="a-ml-3 a-flex-column  ">
-			  <input class=" a-bg-orange-yellow-lighter a-h-90  a-font" type="text" v-model="form.address" :placeholder="$t('placeholder.address')" placeholder-class="a-text-gray-light" style="width: 500rpx;"/>
+			  <input class="  a-h-90  a-font a-text-white" type="text" v-model="form.address" :placeholder="$t('placeholder.address')" placeholder-class="a-text-gray-light" style="width: 500rpx;"/>
 			  </view>
 			  </view>
 			<!-- 验证码 -->
-			<view class="forms-border-bottom a-flex a-align-center a-bg-orange-yellow-lighter a-h-90">
+			<view class="forms-border-bottom a-flex a-align-center a-bg-primary-op-3 a-h-90">
 				<view class="a-ml-3 a-flex-column a-w-100">
-					<text class="a-font a-font-weight-bold">{{$t('form.sms')}}</text>
+					<text class="a-font a-font-weight-bold a-text-white">{{$t('form.sms')}}</text>
 				</view>
 
-				<input class="a-flex-1 a-bg-orange-yellow-lighter a-h-90 a-rounded-circle a-px-4 a-font" type="number" v-model="form.smsCode"  :placeholder="$t('placeholder.Sms')" placeholder-class="a-text-gray-light" />
+				<input class="a-flex-1  a-h-90 a-rounded-circle a-px-4 a-font a-text-white" type="number" v-model="form.smsCode"  :placeholder="$t('placeholder.Sms')" placeholder-class="a-text-gray-light" />
 				<view class="a-h-60 a-mr-2 a-rounded-circle a-bg-gradual-blue-primary-LR a-px-2 a-flex a-align-center" @click="sendSmsCaptcha()">
-					<text v-if="!smsState" class="a-text-white a-font-sm">{{$t('form.getOTP')}}</text>
-					<text v-else class="a-text-white a-font-sm">({{ times }}){{$t('user.seconds')}}</text>
+					<text v-if="!smsState" class="a-text-white a-font-sm a-text-white">{{$t('form.getOTP')}}</text>
+					<text v-else class="a-text-white a-font-sm a-text-white">({{ times }}){{$t('user.seconds')}}</text>
 				</view>
 			</view>
 			
-			<view v-if="form.cateid==1" class="a-bg-orange-yellow-lighter a-pt-2">
+			<view v-if="form.cateid==1" class="a-bg-primary-op-3 a-pt-2">
 				<view class="a-ml-3 a-flex-column">
-					<text class="a-font a-font-weight-bold">{{$t('form.networkType')}}</text>
+					<text class="a-font a-font-weight-bold  a-text-white">{{$t('form.networkType')}}</text>
 				</view>
 				
 				<view class="a-flex a-align-center a-p-2 forms-border-bottom">
@@ -69,9 +69,9 @@
 			</view>
 			
 			<!-- 默认 -->
-			<view class="a-flex a-align-center a-bg-orange-yellow-lighter a-rounded-bottom-1-5 a-h-90">
+			<view class="a-flex a-align-center a-bg-primary-op-3 a-rounded-bottom-1-5 a-h-90">
 				<view class="a-ml-3 a-flex-column">
-					<text class="a-font a-font-weight-bold">{{$t('form.defaultAccount')}}</text>
+					<text class="a-font a-font-weight-bold a-text-white">{{$t('form.defaultAccount')}}</text>
 				</view>
 				<view class="a-flex-1 a-flex a-justify-end">
 					<switch :checked="checked" @change="changeSwitch"></switch>

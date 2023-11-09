@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class="a-flex-column a-justify-center  a-w-690 a-mt-5  a-rounded-2 a-mx-3 a-h-230 a-bg-orange-yellow-lighter">
+		<view class="a-flex-column a-justify-center  a-w-690 a-mt-5  a-rounded-2 a-mx-3 a-h-230 a-bg-primary-op-3">
 			<image class="a-w-690 a-h-230 a-position-absolute" src="/static/income/bg-income.png"></image>
 			<view style="z-index:1" class="a-flex-column a-px-5">
 				<text class="a-font a-text-yellow-orange a-font-weight-bold">{{$t('user.amountMoney')}}</text>
@@ -16,38 +16,38 @@
 			</view>
 		</view> -->
 		
-		<view class="a-mx-3 a-overflow-hidden a-bg-orange-yellow-lighter a-mt-2 a-rounded-2">
+		<view class="a-mx-3 a-overflow-hidden a-bg-primary-op-3 a-mt-2 a-rounded-2">
 			  
-			<view class="a-flex a-align-center a-bg-orange-yellow-lighter  a-h-90 a-my-2 forms-border-bottom">
+			<view class="a-flex a-align-center a-bg-primary-op-3  a-h-90 a-my-2 forms-border-bottom">
 				<view class="a-ml-3 a-flex-column a-w-150 ">
-					<text class="a-font a-font-weight-bold">{{$t('user.amount')}}</text>
+					<text class="a-font a-font-weight-bold a-text-white">{{$t('user.amount')}}</text>
 				</view>
 			
-				<input class="a-flex-1  a-h-90 a-px-4 a-font" type="number" :value="form.amount" @input="changeInput" :placeholder="$t('placeholder.theTransferAmount')" placeholder-class="a-text-gray-light" />
+				<input class="a-flex-1  a-h-90 a-px-4 a-font  a-text-white" type="number" :value="form.amount" @input="changeInput" :placeholder="$t('placeholder.theTransferAmount')" placeholder-class="a-text-gray-light" />
 				<view @click="all" class="a-h-60 a-mr-2 a-rounded-circle a-bg-primary a-px-4 a-flex a-align-center">
-					<text class="a-text-white a-font-sm">{{$t('button.all')}}</text>
+					<text class="a-text-white a-font-sm a-text-white">{{$t('button.all')}}</text>
 				</view>
 			</view>
 			
-			<view class="a-flex a-align-center a-bg-orange-yellow-lighter  a-my-2 forms-border-bottom">
+			<view class="a-flex a-align-center a-bg-primary-op-3  a-my-2 forms-border-bottom">
 				<view class="a-ml-3 a-flex-column a-w-150">
-					<text class="a-font a-font-weight-bold">{{$t('form.paymentPassword')}}</text>
+					<text class="a-font a-font-weight-bold a-text-white">{{$t('form.paymentPassword')}}</text>
 				</view>
 			
-				<input class="a-flex-1  a-h-90 a-px-4 a-font" type="text" v-model="form.pay_pwd" :placeholder="$t('placeholder.paymentPassword')" placeholder-class="a-text-gray-light" />
+				<input class="a-flex-1  a-h-90 a-px-4 a-font a-text-white" type="text" v-model="form.pay_pwd" :placeholder="$t('placeholder.paymentPassword')" placeholder-class="a-text-gray-light" />
 			</view>
 			
 			<view class="a-flex a-align-center a-justify-between   a-h-90 a-my-2 ">
 				<view class="a-ml-3 a-flex-column">
-					<text class="a-font a-font-weight-bold">{{$t('form.bankAccountName')}}</text>
+					<text class="a-font a-font-weight-bold a-text-white">{{$t('form.bankAccountName')}}</text>
 				</view>
 					<view @click="$navTo('pages/user/account/index?isSelect=true')" class="a-flex-1 a-flex a-justify-end a-align-center a-px-2">
 						<view v-if="form.user_payment_id && paymentInfo" class="a-flex-column a-align-end a-mr-2">
-							<text class="a-font a-text-gray a-text-ellipsis-1 ">{{paymentInfo.cateid==1?'Usdt':paymentInfo.user_name}}</text>
-							<text class="a-font a-text-gray a-text-ellipsis-1">{{paymentInfo.cateid==1?paymentInfo.address:paymentInfo.bank_card_number}}</text>
+							<text class="a-font  a-text-ellipsis-1 a-text-white ">{{paymentInfo.cateid==1?'Usdt':paymentInfo.user_name}}</text>
+							<text class="a-font  a-text-ellipsis-1 a-text-white">{{paymentInfo.cateid==1?paymentInfo.address:paymentInfo.bank_card_number}}</text>
 						</view>
-						<text v-else class="a-font a-text-gray a-mr-2">{{$t('form.select')}}</text>
-						<text class="iconfonts icon-ai-arrow-down a-text-gray"></text>
+						<text v-else class="a-font  a-mr-2 a-text-white">{{$t('form.select')}}</text>
+						<text class="iconfonts icon-ai-arrow-down  a-text-white"></text>
 					</view>
 			</view>
 		</view>

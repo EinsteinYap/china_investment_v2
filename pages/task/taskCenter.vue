@@ -1,22 +1,22 @@
 <template>
-	<view>
+	<view class="task-page">
 		<mescroll-body ref="mescrollRef" :sticky="true" @init="mescrollInit" :down="{ use: true,auto:false }" :up="upOption"
 		@up="upCallback"  @down="downCallback">
-		
+		<view class=" a-flex a-justify-center">
 		<view class="a-mx-3  a-mt-2">
-			<view v-for="(item,index) in list.data" :key="index" @click="$navTo('pages/task/articleTask?id='+item.id)" class="a-w-690 a-h-250 a-bg-white a-position-relative a-mr-3 a-mt-3 a-rounded-2">
+			<view v-for="(item,index) in list.data" :key="index" @click="$navTo('pages/task/articleTask?id='+item.id)" class="a-w-690 a-h-250 a-bg-primary-op-3 a-position-relative a-mr-3 a-mt-3 a-rounded-2">
 				<!-- <image class="a-w-690 a-h-250 a-position-absolute a-top-0" src="/static/home/bg-task-1.png"></image> -->
 				<view class="a-w-690 a-h-250 a-p-3 a-flex-column a-justify-between a-position-relative" style="z-index:1">
-					<text class="a-text-black a-font-lg a-font-weight-bold a-text-ellipsis-1">{{item.title}}</text>
-					<text class="a-text-black a-font a-text-ellipsis-2">{{item.synopsis}}</text>
+					<text class="a-text-white a-font-lg a-font-weight-bold a-text-ellipsis-1">{{item.title}}</text>
+					<text class="a-text-white a-font a-text-ellipsis-2">{{item.synopsis}}</text>
 					<view class="a-flex a-align-center a-justify-between">
-						<text class="a-font-max-three a-text-black a-font-weight-bold ">{{item.award_money}} Rs</text>
-						<text class="a-font-sm a-text-black">{{item.end_time_label}}</text>
+						<text class="a-font-max-three a-text-white a-font-weight-bold ">{{item.award_money}} Rs</text>
+						<text class="a-font-sm a-text-white">{{item.end_time_label}}</text>
 					</view>
 				</view>
 			</view>
 		</view>
-		
+		</view>
 		
 		</mescroll-body>
 	</view>
@@ -106,6 +106,12 @@
 	}
 </script>
 
-<style>
-
+<style lang="scss">
+.task-page{
+	background-image: url('@/static/task/task.png');
+	background-size:500rpx 500rpx;
+	background-repeat: no-repeat !important;
+	background-position: center;
+	background-attachment: fixed;
+}
 </style>

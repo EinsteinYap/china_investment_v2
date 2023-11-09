@@ -572,5 +572,7 @@ page{
   }
 }
 
-
+.a-border-top{
+	border-color: #7d7d7d !important;
+}
 </style>

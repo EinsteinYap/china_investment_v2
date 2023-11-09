@@ -1,7 +1,7 @@
 <template>
 	<view>
 		
-		<u-sticky bgColor="#fff" class="a-position-relative">
+		<u-sticky bgColor="#ffa200" class="a-position-relative">
 			<!-- #ifdef H5 -->
 			<view class="a-h-28 a-flex a-align-center a-justify-center a-position-absolute a-right-2 a-bg-red a-px-1 a-rounded-2 a-rounded-bottom-left-0 a-position-absolute" style="top:-1rpx;">
 				<text class="a-font-tiny a-text-white">{{$t('user.paymentGift')}}</text>
@@ -12,7 +12,7 @@
 				<text class="a-font-min a-text-white">{{$t('user.paymentGift')}}</text>
 			</view>
 			<!-- #endif -->
-		<u-tabs style="background-color: #ffa200 !important;" :list="tabs" :is-scroll="false" :current="curTab" active-color="#333333" :duration="0.2"
+		<u-tabs style="background:#ffa200 !important;" :list="tabs" :is-scroll="false" :current="curTab" active-color="#333333" :duration="0.2"
 		  @change="onChangeTab" />
 		</u-sticky>
 		
@@ -33,7 +33,7 @@
 			<view class="a-py-3">
 				<text class="a-font-lg a-font-weight-bold a-pl-4 a-text-white">{{$t('user.amount')}}</text>
 			</view>
-			<view class="a-flex a-align-center a-flex-wrap a-bg-primary-op-3 a-rounded-2 a-w-690 a-h-670 a-pl-1">
+			<view class="a-flex a-align-center a-flex-wrap a-rounded-2 a-w-690 a-h-670 a-pl-1">
 				<view v-for="(item,index) in payplan" :key="index" @click="changePlan(index)" class="a-flex-column a-align-center a-justify-center a-w-180 a-h-160 a-rounded-2 a-position-relative a-mb-2 a-mx-2" :class="active==index?'a-bg-orange-yellow':'a-bg-gray'">
 					<view v-if="curTab ==0" class="a-w-50 a-h-50 a-rounded-circle a-bg-orange a-flex a-align-center a-justify-center">
 						<text class="a-text-white a-font">₹</text>
