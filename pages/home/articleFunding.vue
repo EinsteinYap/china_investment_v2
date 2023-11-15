@@ -40,9 +40,9 @@
 			
 		</view>
 		<view class='a-w-750 a-h-120'></view>
-		<view class="a-w-600 a-h-120 a-flex a-justify-center a-position-fixed a-bottom-0 a-mx-7-5">
-			<view @click.stop="setNumber(detail.id)" class="a-bg-brown-orange a-h-90 a-flex-1 a-w-400 a-rounded-circle a-flex a-align-center a-justify-center">
-				<text class="a-font-lg a-text-brown a-font-weight-bold">{{$t('button.purchase')}}</text>
+		<view class=" glass-container a-w-600 a-h-120 a-flex a-justify-center a-position-fixed a-bottom-0 a-mx-7-5">
+			<view @click.stop="setNumber(detail.id)" class=" a-h-90 a-flex-1 a-w-400 a-rounded-circle a-flex a-align-center a-justify-center">
+				<view class="btn" style="--clr:#FFA200;"><a><text class="a-font-lg glass-button">{{$t('button.purchase')}}</text></a></view>
 			</view>
 		</view>
 		
@@ -125,10 +125,13 @@
 			closePurchasePopup() {
 				this.purchasePopup = false
 			},
-			setNumber(id){
-				this.id = id
-				this.openPurchasePopup()
+			setNumber(id) {
+			  this.id = id;
+			  setTimeout(() => { 
+				  this.openPurchasePopup(); 
+				  }, 1000);
 			},
+
 			fundingBuy(){
 				var that = this
 				if(!that.isLogin){

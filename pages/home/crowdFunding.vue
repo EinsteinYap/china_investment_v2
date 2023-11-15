@@ -9,7 +9,7 @@
 		</u-sticky>
 		
 		<view class="a-mx-3">
-			<view v-for="(item,index)  in list.data" :key="index" @click="$navTo('pages/home/articleFunding?id='+item.id)" class="a-mt-3 a-bg-primary-op-3 a-rounded-2 a-h-970 a-w-690 a-flex-column a-align-center a-justify-center">
+			<view v-for="(item,index)  in list.data" :key="index" @click="navigateNext(item.id)" class="a-mt-3 a-bg-primary-op-3 a-rounded-2 a-h-970 a-w-690 a-flex-column a-align-center a-justify-center">
 				<view class="a-w-690 a-h-430 a-rounded-top-2 a-position-relative a-overflow-hidden">
 					<view  class="a-w-690 a-h-430   a-flex a-align-center a-justify-center">
 						<image class="a-w-750  a-position-absolute" mode="widthFix" :src="item.image_url"></image>
@@ -30,8 +30,8 @@
 						<PROGRESS isAnimate duration="1000" :percentage="item.rate" strokeWidth="5" bgColor="#FFA200" inBgColor="#ffffff" fontColor="#ffffff"></PROGRESS>
 					</view>
 					<view class="a-flex a-justify-center a-mx-auto a-my-3 a-w-500">
-						<view class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
-							<text class="a-font-lg a-text-brown a-font-weight-bold">{{$t('button.purchase')}}</text>
+						<view class="glass-container a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
+							<view class="btn" style="--clr:#FFA200;"><a href="#"><text class="a-font-lg glass-button a-font-weight-bold">{{$t('button.purchase')}}</text></a></view>
 						</view>
 					</view>
 				</view>
@@ -161,6 +161,10 @@
 					
 				})
 			},
+		navigateNext(id){
+		  setTimeout(() => { this.$navTo('pages/home/articleFunding?id='+id); }, 1000);
+		},
+
 		}
 	}
 </script>
