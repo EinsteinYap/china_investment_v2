@@ -11,7 +11,7 @@
 		
 		<view class="a-mx-3 a-pb-3">
 			<view v-for="(item,index) in list.data" :key="index" @click="$navTo('pages/task/articleTask?id='+item.task.id)" class="a-mt-4 a-position-relative">
-				<view class="a-w-690 a-h-230 a-position-absolute a-bg-blue-sea a-rounded-2" ></view>
+				<view class="a-w-690 a-h-230 a-position-absolute a-bg-primary-op-5 a-rounded-2" ></view>
 				<view class="a-w-690 a-h-230 a-flex-column a-justify-between a-position-relative a-py-2 a-px-3" style="z-index:1">
 					<!-- <view class="a-flex a-align-center a-justify-between a-h-80">
 						<text class="a-font-lg a-font-weight-bold a-text-white">{{item.award_money}} Rs</text>
@@ -151,7 +151,4 @@
 </script>
 
 <style lang="scss">
-page{
-	background-color: #F8F8F8;
-}
 </style>
