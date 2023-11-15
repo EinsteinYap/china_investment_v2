@@ -64,8 +64,8 @@
 		
 		<view class="a-flex a-justify-center ">
 		<view class="a-w-750 a-h-100 a-px-5 a-position-fixed a-bottom-2 a-flex a-justify-center">
-			<view @click="navToAuth" class="a-bg-brown-orange a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center">
-				<text class="a-font-lg a-font-weight-bold a-text-brown">{{$t('button.rent')}}</text>
+			<view @click="navToAuth" class="glass-container a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center">
+				<view class="btn" style="--clr:#FFA200;"><a href="#"><text class="a-font-lg a-font-weight-bold glass-button">{{$t('button.rent')}}</text></a></view>
 			</view>
 		</view>
 		</view>
@@ -155,8 +155,8 @@
 				  </view>
 				  
 				  <view class="a-flex a-align-center a-justify-center a-pb-3 a-px-5">
-					  <view @click="sumbit" class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
-						  <text class="a-font-lg a-font-weight-bold a-text-brown">Rent</text>
+					  <view @click="sumbit()" class="glass-container a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
+						  <view class="btn" style="--clr:#FFA200;"><a href="#"><text class="a-font-lg a-font-weight-bold glass-button">{{$t('button.rent')}}</text></a></view>
 					  </view>
 				  </view>
 			    </view>
@@ -238,7 +238,7 @@
 			},
 			navToAuth(url,index){
 				if(this.isLogin){
-					this.handleShowPopup()
+					setTimeout(() => { this.handleShowPopup(); }, 1000);
 				}else{
 					this.popup.title=this.$t('toast.reminder'),
 					this.popup.content=this.$t('toast.rLogin'),
@@ -289,14 +289,14 @@
 				  that.$toast(this.$t('toast.rAgreement'))
 				  return false
 				}
-				that.handleShowPopup()
+				setTimeout(() => { that.handleShowPopup(); }, 1000),
 				this.popup.title=this.$t('toast.reminder'),
 				this.popup.content=this.$t('toast.rBuyA')+this.getNumber()+this.$t('toast.rBuyB'),
 				this.popup.ok=this.$t('toast.ok'),
 				this.popup.cancel=this.$t('toast.cancel'),
 				this.popup.isLogin=false,
 				this.popup.isOperation=true,
-				this.popup.isShow=true
+				setTimeout(() => { this.popup.isShow=true; }, 1000),
 				this.popup.item=null
 				// uni.showModal({
 				//   title: this.$t('toast.reminder'),
