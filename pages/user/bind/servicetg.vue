@@ -5,8 +5,8 @@
 			
 			<text class="a-w-600 a-text-blue-sea-light a-font-lg a-line-height-60">{{ms}}</text>
 			
-			<view @click="servicetg" class="a-bg-brown-orange  a-h-90 a-w-500 a-rounded-circle a-flex a-align-center a-justify-center " style="margin-top:100rpx;">
-				<text class="a-font-lg a-text-brown a-font-weight-bold">Complain immediately</text>
+			<view @click="servicetg" class="glass-container  a-h-90 a-w-500 a-rounded-circle a-flex a-align-center a-justify-center " style="margin-top:100rpx;">
+				<view class="btn" style="--clr:#ff0000;"><a href="#"><text class="a-font-lg glass-button a-font-weight-bold">Complain immediately</text></a></view>
 			</view>
 		</view>
 	</view>
@@ -35,10 +35,16 @@
 			},
 			servicetg(){
 				// #ifdef H5
-				window.open(this.url, '_blank')
+				setTimeout(() => {
+					window.open(this.url, '_blank')
+				}, 1000)
+				
 				// #endif 
 				// #ifndef H5
-				plus.runtime.openURL(this.url);  
+				
+				 setTimeout(() => {
+				 	plus.runtime.openURL(this.url); 
+				 }, 1000)
 				// #endif 
 			}
 		}

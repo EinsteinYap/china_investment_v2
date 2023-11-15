@@ -72,8 +72,8 @@
 		</view>
 		
 		<view class="a-px-3 a-mt-5">
-			<view @click="sumbit" class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
-				<text class="a-font-lg a-text-brown a-font-weight-bold">{{$t('button.determine')}}</text>
+			<view @click="sumbit" class="glass-container a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
+				<view class="btn" style="--clr:#ffa200;"><a href="#"><text class="glass-button a-font-lg a-text-white a-font-weight-bold">{{$t('button.determine')}}</text></a></view>
 			</view>
 		</view>
 		

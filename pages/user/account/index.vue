@@ -23,8 +23,8 @@
 		
 		<view class="a-w-750 a-h-150"></view>
 		<view class="a-flex a-w-750 a-h-150 a-align-center a-px-5 a-justify-center a-position-fixed a-top-60 a-mt-10">
-			<view @click="openShowPopup" class="a-border a-border-orange-yellow a-h-90 a-w-500 a-rounded-circle a-flex a-align-center a-justify-center">
-				<text class="a-font-lg a-text-brown-orange">{{$t('button.addNewAccount')}}</text>
+			<view @click="openShowPopup" class="glass-container a-h-90 a-w-500 a-rounded-circle a-flex a-align-center a-justify-center">
+				<view class="btn" style="--clr:#ffa200;"><a href="#"><text class="a-font-lg glass-button">{{$t('button.addNewAccount')}}</text></a></view>
 			</view>
 		</view>
 		

@@ -10,7 +10,7 @@
 			<text class="a-font-max-four a-font-weight-bold a-mt-2 a-text-brown" style="z-index: 1;">{{num}}</text>
 		</view>
 		  
-		<view v-if="list.data && list.data.length > 0"  class="a-m-3 a-py-3 a-bg-orange-yellow-lighter a-rounded-2 a-px-3">
+		<view v-if="list.data && list.data.length > 0"  class="a-m-3 a-py-3 a-bg-primary-op-5 a-rounded-2 a-px-3">
 			<view v-for="(item,index) in list.data" :key="index" class="a-flex a-align-center a-justify-between a-py-2">
 				<view class="a-flex a-align-center">
 					<view class="a-w-90 a-h-90 a-rounded-circle a-overflow-hidden a-mr-2">
@@ -18,7 +18,7 @@
 					</view>
 					<view class="">
 						<view class="a-flex a-align-center">
-							<text class="a-font-lg a-font-weight-bold">{{item.area_code}}-{{item.mobile}}</text>
+							<text class="a-font-lg a-font-weight-bold a-text-white">{{item.area_code}}-{{item.mobile}}</text>
 							<view v-if="item.grade" class="a-px-2 a-h-40 a-flex a-align-center a-bg-orange a-rounded-circle a-ml-2">
 								<text class="a-font-sm a-text-white">{{item.grade.name}}</text>
 							</view>

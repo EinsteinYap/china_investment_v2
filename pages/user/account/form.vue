@@ -79,8 +79,8 @@
 			</view>
 			<!-- 登录按钮 -->
 			<view class="a-mt-5">
-				<view @click="sumbit" class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
-					<text class="a-font-lg a-font-weight-bold">{{$t('button.confirmation')}}</text>
+				<view @click="sumbit" class="glass-container a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
+					<view class="btn" style="--clr:#ffa200;"><a href="#"><text class="a-font-lg a-font-weight-bold glass-button">{{$t('button.confirmation')}}</text></a></view>
 				</view>
 				<view v-if="id" @click="deteleAccount" class=" a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4" >
 					<text class="a-font a-text-primary">{{$t('button.deleteAccount')}}</text>

@@ -4,7 +4,7 @@
 		@up="upCallback" @down="downCallback">
 
 		<view class="a-mx-3">
-			<view v-for="(item,index) in list.data" class="a-mt-3 a-bg-primary-lighter a-rounded-2">
+			<view v-for="(item,index) in list.data" class="a-mt-3 a-bg-primary-op-3 a-rounded-2">
 				<view class="a-w-690 a-rounded-top-2 a-position-relative a-overflow-hidden">
 					<view  class="a-w-690 a-h-430 a-rounded-top-2 a-flex a-align-center a-justify-center">
 						<image class="a-w-750 a-rounded-top-2 a-position-absolute" mode="widthFix" :src="item.crowFunding.image_url"></image>
@@ -15,29 +15,29 @@
 					<text v-else class="a-text-brown a-font-lg a-font-weight-bold">{{$t('user.inProgress')}}</text>
 				</view>
 				<view class="a-flex-column a-mx-3 a-mt-5 a-w-600 a-justify-center">
-					<text class=" a-font a-text-primary">{{item.crowFunding.title}}</text>
+					<text class=" a-font a-text-white">{{item.crowFunding.title}}</text>
 					<text class=" a-font-max a-text-orange a-mt-2">{{item.crowFunding.amount}} Rs</text>
 					<!-- <view class="a-flex a-align-center a-justify-between a-mt-2">
 						<text class="a-text-gray a-font-sm">{{$t('pro.purchaseLimit')}}:</text>
 						<text class="a-text-gray a-font-sm">{{item.limit_num}}</text>
 					</view> -->
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-blue-sea-light a-font-sm">{{$t('pro.projectBenefits')}}:</text>
-						<text class="a-text-blue-sea-light a-font-sm">{{item.crowFunding.profit_rate}}%</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.projectBenefits')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.crowFunding.profit_rate}}%</text>
 					</view>
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-blue-sea-light a-font-sm">{{$t('pro.leastInvest')}}:</text>
-						<text class="a-text-blue-sea-light a-font-sm">{{item.crowFunding.min_buy_amount}}Rs</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.leastInvest')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.crowFunding.min_buy_amount}}Rs</text>
 					</view>
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-blue-sea-light a-font-sm">{{$t('pro.returnDays')}}:</text>
-						<text class="a-text-blue-sea-light a-font-sm">{{item.crowFunding.total_day}}</text>
+						<text class="a-text-white a-font-sm">{{$t('pro.returnDays')}}:</text>
+						<text class="a-text-white a-font-sm">{{item.crowFunding.total_day}}</text>
 					</view>
 					<view class="a-flex-1 a-mt-2">
-						<PROGRESS isAnimate duration="1000" :percentage="item.crowFunding.rate" strokeWidth="5" bgColor="#FFA200" inBgColor="#0B13B5" fontColor="#0B13B5"></PROGRESS>
+						<PROGRESS isAnimate duration="1000" :percentage="item.crowFunding.rate" strokeWidth="5" bgColor="#FFA200" inBgColor="#FFF" fontColor="#FFF"></PROGRESS>
 					</view>
 					<view class="a-flex a-align-center  a-mt-2 a-mb-5">
-						<text class="a-text-blue-sea-light a-font-sm">{{$t('pages.crowdFunding')}}:</text>
+						<text class="a-text-white a-font-sm">{{$t('pages.crowdFunding')}}:</text>
 						<text class="a-font-max a-text-orange a-ml-2">{{item.order_price}}Rs</text>
 					</view>
 				</view>

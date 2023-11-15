@@ -28,8 +28,8 @@
 				<text class="iconfonts icon-ai-arrow-down a-text-white"></text>
 			</view>
 			<view class="a-flex a-align-center a-justify-between a-px-3 a-py-5  " >
-				<view @click="editAvatar" class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
-					<text class="a-font-lg a-text-brown a-font-weight-bold a-text-white">{{$t('button.saveEdit')}}</text>
+				<view @click="editAvatar" class="glass-container a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
+					<view class="btn" style="--clr:#ffa200;"><a href="#"><text class="glass-button a-font-weight-bold ">{{$t('button.saveEdit')}}</text></a></view>
 				</view>
 			</view>
 		</view>

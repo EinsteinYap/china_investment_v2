@@ -39,8 +39,8 @@
 			  
 			  <!-- 登录按钮 -->
 			<view class="a-flex a-align-center a-justify-center a-py-3 a-px-5">
-				<view @click="setPwd" class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
-					<text class="a-font-lg a-text-brown a-font-weight-bold a-text-white">{{$t('button.determine')}}</text>
+				<view @click="setPwd" class="glass-container a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
+					<view class="btn" style="--clr:#ffa200;"><a href="#"><text class="glass-button a-font-lg  a-font-weight-bold ">{{$t('button.determine')}}</text></a></view>
 				</view>
 			</view>
 				  

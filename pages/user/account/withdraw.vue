@@ -59,8 +59,8 @@
 		
 		<view class="a-w-750 a-h-100"></view>
 		<view class="a-w-750 a-h-100 a-px-5 a-position-fixed a-bottom-0 a-flex a-justify-center">
-			<view @click="sumbit" class="a-bg-brown-orange a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center">
-				<text class="a-font-lg a-font-weight-bold a-text-brown">{{$t('button.determine')}}</text>
+			<view @click="sumbit" class="glass-container a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center">
+					<view class="btn" style="--clr:#ffa200;"><a href="#"><text class="a-font-lg a-font-weight-bold glass-button">{{$t('button.determine')}}</text></a></view>
 			</view>
 		</view>
 		<POPUP :showPopup="popup.isShow" :ok="popup.ok" :cancel="popup.cancel" :content="popup.content" :title="popup.title" @cancel="cancelPopup" @sure="surePopup"></POPUP>
