@@ -51,8 +51,8 @@
 		
 		<view class="a-w-750 a-h-100"></view>
 		<view class="a-w-750 a-h-100 a-px-5 a-position-fixed a-bottom-0 a-flex a-justify-center">
-			<view v-if="detail.isReceive" @click.stop="$navTo('pages/user/bind/myTasks')" class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
-				<text class="a-font-lg a-text-brown a-font-weight-bold">{{$t('button.submit')}}</text>
+			<view v-if="detail.isReceive" @click="navigateNext()" class="glass-container a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
+				<view class="btn" style="--clr:#FFA200;"><a href="#"><text class="a-font-lg glass-button">{{$t('button.submit')}}</text></a></view>
 			</view>
 			<view v-else @click="receive" class="a-bg-brown-orange a-h-90 a-flex-1 a-rounded-circle a-flex a-align-center a-justify-center">
 				<text class="a-font-lg a-text-brown a-font-weight-bold">{{detail.btn_name}}</text>
@@ -161,7 +161,10 @@
 					console.log(this.popup.item)
 					this.sureReceive()
 				}
-			}
+			},
+			navigateNext(){
+			  setTimeout(() => { this.$navTo('pages/user/bind/myTasks'); }, 1000);
+			},
 		}
 	}
 </script>
