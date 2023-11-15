@@ -12,6 +12,7 @@
     <!-- 表单 -->
     <view class="a-rounded-top-5 a-position-relative a-px-2" style="z-index:2">
 	  <view v-if="!register" class="a-mx-5 a-overflow-hidden">
+		  
 		  <!-- 手机号 -->
 		  <view v-if="!register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
 			<text class="a-font-sm a-ml-3 a-font-weight-bold">{{$t('form.account')}}</text>
@@ -23,21 +24,21 @@
 		  </view>
 		  
 		  <!-- 密码 -->
-		  <view v-if="!register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
+		  <view  class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
 			<text class="a-font-sm a-ml-3 a-font-weight-bold">{{$t('form.password')}}</text>
 			
 			<input class="a-flex-1 a-bg-gray-light a-h-90 a-rounded-circle a-px-4 a-font" type="text" password v-model="form.password"  :placeholder="$t('placeholder.password')" placeholder-class="a-text-gray-light" />
 		  </view>
-		  
+	
 		  
 		  <!-- 登录按钮 -->
-			<view v-if="!register" class="a-mt-4 animate__animated animate__zoomIn animate__delay-1s">
+		<!-- 	<view v-if="!register" class="a-mt-4 animate__animated animate__zoomIn animate__delay-1s">
 				<view class="a-bg-gradual-purple-LR a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4" @click="handleLogin">
 					<text class="a-font-lg">{{$t('button.login')}}</text>
 				</view>
-				<!-- <view @click="register = true" class="a-bg-orange a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4">
-					<text class="a-font-lg a-text-white">{{$t('button.register')}}</text>
-				</view> -->
+			</view> -->
+			<view class="glass-container a-mt-3 animate__animated animate__zoomIn animate__delay-1s a-flex-1 a-flex a-align-center a-justify-center" @click="handleLogin">
+				<view class="btn" style="--clr:#ffff7f;"><a href="#"><text class="a-font-lg glass-button">{{$t('button.login')}}</text></a></view>
 			</view>
 			
 			<view v-if="!register" class="a-flex a-justify-center a-mt-3 animate__animated animate__jackInTheBox animate__delay-3s">
@@ -90,8 +91,8 @@
 		  </label>
 		  <!-- 登录按钮 -->
 		<view v-if="register" class="a-mt-4 ">
-			<view class="a-bg-gradual-purple-LR a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4 animate__animated animate__rotateInDownRight" @click="handleRegister">
-				<text class="a-font">{{$t('button.register')}}</text>
+			<view class="glass-container a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4 animate__animated animate__rotateInDownRight" @click="handleRegister">
+				<view class="btn" style="--clr:#36ff20;"><a href="#"><text class="a-font glass-button">{{$t('button.register')}}</text></a></view>
 			</view>
 			
 		</view>

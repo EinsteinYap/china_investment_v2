@@ -77,6 +77,9 @@
   @import './uni.scss';
   @import './common/styles/iconfont.scss';
   @import './common/styles/animated.scss';
+  @import './common/styles/neon-text.css';
+  @import './common/styles/glass-buttons.scss';
+  
   
 </style>
 
