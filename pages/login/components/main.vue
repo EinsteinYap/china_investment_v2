@@ -10,42 +10,53 @@
 	</view>
 	
     <!-- 表单 -->
-    <view class="a-rounded-top-5 a-position-relative a-px-2" style="z-index:2">
-	  <view v-if="!register" class="a-mx-5 a-overflow-hidden">
-		  
-		  <!-- 手机号 -->
-		  <view v-if="!register" class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
-			<text class="a-font-sm a-ml-3 a-font-weight-bold">{{$t('form.account')}}</text>
-			<view class="a-pl-2 a-flex a-align-center a-justify-center a-my-2">
-				<text @click="handleShowPopup" class= "a-font">+{{form.areaCodeText}}</text>
-				<text class="iconfonts icon-ai-arrow-down a-font-tiny a-text-gray a-transform-90 a-ml-1"></text>
-			</view>
-			<input class="a-flex-1 a-bg-gray-light a-h-90 a-rounded-circle a-px-4 a-font" type="number" v-model="form.mobile" :placeholder="$t('placeholder.phone')" placeholder-class="a-text-gray-light" />
-		  </view>
-		  
-		  <!-- 密码 -->
-		  <view  class="a-flex a-align-center a-bg-gray-light a-rounded-circle a-h-90 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
-			<text class="a-font-sm a-ml-3 a-font-weight-bold">{{$t('form.password')}}</text>
-			
-			<input class="a-flex-1 a-bg-gray-light a-h-90 a-rounded-circle a-px-4 a-font" type="text" password v-model="form.password"  :placeholder="$t('placeholder.password')" placeholder-class="a-text-gray-light" />
-		  </view>
+    <view class="a-rounded-top-5 a-position-relative a-px-5" style="z-index:2">
+	  <view v-if="!register" class="a-mx-5 a-flex a-justify-center">
+		  <view class="box a-ml-3">
+		  			<view class="square" style="--i:0"></view>
+		  			<view class="square" style="--i:1"></view>
+		  			<view class="square" style="--i:2"></view>
+		  			<view class="square" style="--i:3"></view>
+		  			<view class="square" style="--i:4"></view>
+		  			<view class="login-glass-container animate__animated animate__zoomIn animate__delay-1s">
+		  				<view class="form">
+		  					<text>Login Form</text>
+		  					<form>
+								 <!-- 手机号 -->
+		  						<view class="inputBox">
+								<view v-if="!register" class="input-box-inner a-flex a-align-center  a-rounded-circle a-h-70 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
+									<text class="a-font-sm a-ml-3 ">{{$t('form.account')}}</text>
+									<view class="a-pl-2 a-flex a-align-center a-justify-center a-my-2">
+										<text @click="handleShowPopup" class= "a-font-sm a-px-2">+{{form.areaCodeText}}</text>
+										<text class="iconfonts icon-ai-arrow-down a-font-tiny a-text-gray a-transform-90 a-ml-1"></text>
+									</view>
+									<input class="a-flex-1 a-h-60 a-rounded-circle a-px-2 a-font-sm" type="number" v-model="form.mobile" :placeholder="$t('placeholder.phone')" placeholder-class="a-text-gray-light" />
+								</view>
+		  							
+		  						</view>
+		  						<view class="inputBox">
+		  							<!-- 密码 -->
+		  							<view  class="a-flex input-box-inner a-h-70 a-align-center  a-rounded-circle a-h-90 a-mt-5 animate__animated animate__jackInTheBox animate__delay-2s">
+		  										<text class="a-font-sm a-ml-3 a-font-weight-bold">{{$t('form.password')}}</text>
+		  										<input class="a-flex-1  a-h-90 a-rounded-circle a-px-4 a-font-sm" type="text" password v-model="form.password"  :placeholder="$t('placeholder.password')" placeholder-class="a-text-gray-light" />
+		  							</view>
+		  						</view>
+		  						<view class="glass-container a-my-2 animate__animated animate__zoomIn animate__delay-3s a-flex-1 a-flex a-align-center a-justify-center" @click="handleLogin">
+		  							<view class="btn" style="--clr:#ffff7f;height: 50rpx;"><a href="#"><text class="glass-button">{{$t('button.login')}}</text></a></view>
+		  						</view>
+		  						
+		  						<view v-if="!register" class="a-flex a-justify-around a-mt-3 animate__animated animate__jackInTheBox animate__delay-3s">
+		  							<text @click="register = true" class="a-text-white">{{$t('button.register')}}</text>
+		  							<text @click="$navTo('pages/user/bind/password?isForgot=true')" class=" a-text-white ">Forgot Password?</text>		  
+		  						</view>
+								<!-- <p class="forget">Forgot password ? <a href="#">Click Here</a></p> -->
+								<!-- <p class="forget">Don't have an account ? <a href="#">Sign up</a></p> -->
+		  					</form>
+		  				</view>
+		  			</view>
+		  		</view>
 	
-		  
-		  <!-- 登录按钮 -->
-		<!-- 	<view v-if="!register" class="a-mt-4 animate__animated animate__zoomIn animate__delay-1s">
-				<view class="a-bg-gradual-purple-LR a-rounded-circle a-h-90 a-flex-1 a-flex a-align-center a-justify-center a-mb-4" @click="handleLogin">
-					<text class="a-font-lg">{{$t('button.login')}}</text>
-				</view>
-			</view> -->
-			<view class="glass-container a-mt-3 animate__animated animate__zoomIn animate__delay-1s a-flex-1 a-flex a-align-center a-justify-center" @click="handleLogin">
-				<view class="btn" style="--clr:#ffff7f;"><a href="#"><text class="a-font-lg glass-button">{{$t('button.login')}}</text></a></view>
-			</view>
-			
-			<view v-if="!register" class="a-flex a-justify-center a-mt-3 animate__animated animate__jackInTheBox animate__delay-3s">
-				<text @click="register = true" class="a-text-white a-mx-7-5">{{$t('button.register')}}</text>
-				<text @click="$navTo('pages/user/bind/password?isForgot=true')" class=" a-text-white">Forgot Password?</text>		  
-			</view>
-		  
+
 	  </view>
 	  
 	  <view  v-if="register" class="a-mx-5 a-overflow-hidden">
@@ -485,5 +496,7 @@
     align-items: center;
   }
   
-  
+.glass-container .btn::before{
+	bottom:-8rpx;
+}
 </style>
