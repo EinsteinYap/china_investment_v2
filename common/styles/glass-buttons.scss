@@ -46,7 +46,9 @@
 	transform: skewX(45deg) translateX(0);
 	transition: 0.5s;
 }
-
+.glass-button:hover{
+	color: #333333 !important;
+}
 .glass-container .btn:hover a::before
 {
 	transform: skewX(45deg) translateX(200%);

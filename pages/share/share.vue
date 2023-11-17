@@ -31,8 +31,14 @@
 					<text class="a-font a-text-white">{{$t('button.copy')}}</text>
 				</view>
 			</view>
-			<view class="a-py-3 a-px-4 a-flex-column a-justify-between a-align-center">
+			<view class="a-py-3 a-px-4 a-flex-column a-justify-between a-align-center a-position-relative">
+
 				<view class="a-flex-column a-align-center a-justify-between a-py-1">
+					<view class="square" style="--i:0"></view>
+					<view class="square" style="--i:1"></view>
+					<view class="square" style="--i:2"></view>
+					<view class="square" style="--i:3"></view>
+					<view class="square" style="--i:4"></view>
 					<view class=" a-h-230 a-flex a-align-center a-justify-center " style="width: 100%;">
 						<image class="a-w-220 a-h-220" :src="info.qrcode"></image>
 					</view>

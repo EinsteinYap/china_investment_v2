@@ -519,6 +519,6 @@
 	bottom:-8rpx;
 }
 .glass-button:hover{
-	color: #000000;
+	color: #000000 !important;
 }
 </style>
