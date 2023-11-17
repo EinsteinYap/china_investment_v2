@@ -5,9 +5,9 @@
 	<view class="a-h-280">
 		<view class="a-flex a-justify-center a-align-center a-px-3 no-titleNView autoFixed" style="z-index:99;" :class="isScrolled?'a-bg-primary':''">
 			<text class="a-font-lg a-text-white" v-if="isScrolled">{{$t('pages.user')}}</text>
-			<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2 a-mt-3 animate__animated animate__rotateIn animate__slow animate__infinite" src="/static/images/ico-set.png"></image>
+			<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2 a-mt-3 animate__animated animate__rotateIn animate__slow animate__infinite hover-effect" src="/static/images/ico-set.png"></image>
 		</view>
-		<view v-if="isLogin" @click="navToAuth('pages/user/bind/setting')" class="a-flex a-align-center a-px-5">
+		<view v-if="isLogin" @click="navToAuth('pages/user/bind/setting')" class="hover-effect a-flex a-align-center a-px-5">
 			<view class="a-w-140 a-h-140">
 				<avatar-image class="animate__animated animate__rollIn" :url="userInfo.avatar" :width="140" />
 				<!-- <image class="a-w-140 a-h-140" :src="userInfo.avatar?userInfo.avatar:'/static/images/avatar.png'"></image> -->
@@ -100,7 +100,7 @@
 		</view> -->
 
 		
-	<view class="a-flex a-justify-center">
+	<view class="a-flex a-justify-center ">
 		<view  v-if="isScrolled" class="a-rounded-bottom-2 a-flex a-justify-center a-align-center  no-titleNView  a-position-fixed a-top-0 a-bg-primary a-w-750" style="z-index:99;">
 		<text class="a-font-lg a-text-white">{{$t('pages.user')}}</text>
 		<image @click="navToAuth('pages/user/bind/setting')" class="a-w-50 a-h-50 a-position-absolute a-right-2 animate__animated animate__rotateIn" src="/static/images/ico-set.png"></image>
@@ -111,19 +111,19 @@
 	
 	<view style="width: 90%;" class="a-bg-primary-op-5 a-mx-auto  a-rounded-top-5 animate__animated animate__bounceInUp animate__delay-1s">
 		<view class="a-flex a-align-start a-justify-around  a-mx-1 a-pt-5 a-pb-2 a-mb-2" >
-			<view @click="navToAuth('pages/user/account/recharge')" class="a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInLeft animate__delay-2s">
+			<view @click="navToAuth('pages/user/account/recharge')" class="hover-effect a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInLeft animate__delay-2s">
 				<view>
 					<image class="a-w-50 a-h-50" src="/static/user/cz.png"></image>
 				</view>
 				<text class="a-font-sm a-text-center a-font-weight-bold a-text-white">{{$t('user.recharge')}}</text>
 			</view>
-			<view @click="navToAuth('pages/user/account/withdraw')" class="a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInLeft animate__delay-2s">
+			<view @click="navToAuth('pages/user/account/withdraw')" class="hover-effect a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInLeft animate__delay-2s">
 				<view>
 					<image class="a-w-50 a-h-50" src="/static/user/tx.png"></image>
 				</view>
 				<text class="a-font-sm a-font-weight-bold a-text-white">{{$t('user.withdraw')}}</text>
 			</view>
-			<view @click="navToAuth('pages/user/bind/myBill')" class="a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInRight animate__delay-2s">
+			<view @click="navToAuth('pages/user/bind/myBill')" class="hover-effect a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInRight animate__delay-2s">
 				<view>
 					<image class="a-w-50 a-h-50" src="/static/user/zd.png"></image>
 				</view>
@@ -135,7 +135,7 @@
 				</view>
 				<text class="a-font-sm a-text-center a-font-weight-bold">{{$t('user.redEnvelope')}}</text>
 			</view> -->
-			<view @click="navToAuth('pages/share/turntable')" class="a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInRight animate__delay-2s">
+			<view @click="navToAuth('pages/share/turntable')" class="hover-effect a-flex-column a-flex-1 a-align-center animate__animated animate__bounceInRight animate__delay-2s">
 				<view>
 					<image class="a-w-50 a-h-50" src="/static/user/dzp.png"></image>
 				</view>

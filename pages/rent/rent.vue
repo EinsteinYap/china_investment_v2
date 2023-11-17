@@ -8,7 +8,7 @@
 		<view class="">
 		
 			<view class="a-flex a-justify-center a-flex-wrap a-rounded-2 a-mt-2 animate__animated animate__backInDown animate__delay-1s">
-				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-primary-op-7-5 a-position-relative">
+				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="hover-effect a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-primary-op-7-5 a-position-relative">
 					<view class="square" style="--i:0"></view>
 					<view class="square" style="--i:1"></view>
 	

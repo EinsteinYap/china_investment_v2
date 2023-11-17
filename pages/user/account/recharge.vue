@@ -34,7 +34,7 @@
 				<text class="a-font-lg a-font-weight-bold a-pl-4 a-text-white">{{$t('user.amount')}}</text>
 			</view>
 			<view class="a-flex a-align-center a-flex-wrap a-rounded-2 a-w-690 a-h-670 a-pl-1">
-				<view v-for="(item,index) in payplan" :key="index" @click="changePlan(index)" class="a-flex-column a-align-center a-justify-center a-w-180 a-h-160 a-rounded-2 a-position-relative a-mb-2 a-mx-2" :class="active==index?'a-bg-orange-yellow':'a-bg-gray'">
+				<view v-for="(item,index) in payplan" :key="index" @click="changePlan(index)" class="hover-effect a-flex-column a-align-center a-justify-center a-w-180 a-h-160 a-rounded-2 a-position-relative a-mb-2 a-mx-2" :class="active==index?'a-bg-orange-yellow':'a-bg-gray'">
 					<view v-if="curTab ==0" class="a-w-50 a-h-50 a-rounded-circle a-bg-orange a-flex a-align-center a-justify-center">
 						<text class="a-text-white a-font">₹</text>
 					</view>

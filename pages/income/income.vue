@@ -12,7 +12,7 @@
 		</view>
 		
 		<view class="a-mx-3 a-mb-5 a-rounded-2 animate__animated animate__backInDown animate__delay-1s">
-			<view v-for="(item,index) in list.data" @click="$navTo('pages/user/bind/myBill')" class="a-mt-3 a-bg-primary-op-7-5 a-rounded-2 a-border a-border-primary">
+			<view v-for="(item,index) in list.data" @click="$navTo('pages/user/bind/myBill')" class="hover-effect a-mt-3 a-bg-primary-op-7-5 a-rounded-2 a-border a-border-primary">
 				<!-- <view class="a-flex-1 a-rounded-2 a-position-relative a-overflow-hidden">
 					<view class="a-w-690 a-h-420   a-flex a-align-center a-justify-center">
 						<image class="a-w-690  a-position-absolute" mode="widthFix" :src="item.order_goods?item.order_goods.goods_image:''"></image>

@@ -40,8 +40,9 @@
 	</view>
 	<view class="a-flex a-justify-center">
 	<view class="a-flex a-justify-center  a-flex-wrap a-mx-3 a-mb-5 a-px-1 a-py-2 a-w-700" >
-			<view v-if="!isScrolled" v-for="(item,index) in info.menu" :key="index" @click="navToAuth(item.link,index)" 
+			<view v-for="(item,index) in info.menu" :key="index" @click="navToAuth(item.link,index)" 
 			class="
+			hover-effect
 			a-w-330
 			a-h-120
 			a-mx-1 a-mb-1
@@ -383,12 +384,12 @@
 						}
 					}
 					
-					// console.log(that.info.notice)
+
 					// for(var i in that.info.notice){
 					// 	// that.notice[i].text = that.notice[i].content
 					// 	that.notice.push(that.notice[i].content)
 					// }
-					console.log(that.notice)
+
 					// [
 					// 	{ id: 1, text: '作者：山东标梵互动信息技术有限公司' },
 					// 	{ id: 2, text: '公司地址：山东·济南 银座和谐广场2座806' },
@@ -443,7 +444,7 @@
 				if(this.popup.isLogin){
 					this.$navTo('pages/login/index')
 				}else if(this.popup.isOperation){
-					console.log(this.popup.item)
+
 				}
 			},
 			goTo(link,type){
@@ -455,7 +456,6 @@
 					plus.runtime.openURL(link);  
 					// #endif 
 				}else{
-					console.log(link)
 					this.$navTo(link)
 				}
 			}

@@ -1526,12 +1526,22 @@ page {
   .a-bg-primary-op-3{
 	  background-color: rgba(79, 79, 71, 0.3);
   }
+  
   .a-bg-primary-op-5{
-  	  background-color: rgba(79, 79, 71, 0.5);
+  	  background-color: rgba(79, 79, 71, 0.5);	
   }
   .a-bg-primary-op-7-5{
   	  background-color: rgba(79, 79, 71, 0.75);
   }
+/*悬停效果*/
+.hover-effect{
+	&:hover{
+		cursor:pointer;
+		transform: translateY(-20rpx) scale(1.05);
+		transition: 1s;
+	}
+}
+
 /* 边框 */
 .a-border {
   border-width: 1rpx!important;
