@@ -18,7 +18,9 @@
 						<image class="a-w-690  a-position-absolute" mode="widthFix" :src="item.order_goods?item.order_goods.goods_image:''"></image>
 					</view>
 				</view> -->
-				<view class="a-p-3">
+				<view class="a-p-3 a-position-relative">
+					<view class="square" style="--i:0"></view>
+					<view class="square" style="--i:1"></view>
 					<text class="a-text-ellipsis-1 a-font-max a-text-white a-font-weight-bold">{{item.goods_name}}</text>
 					<view class="a-flex a-align-center a-justify-between a-mt-2">
 						<text class="a-text-white a-font-sm">{{$t('pro.investmentAmount')}}:</text>

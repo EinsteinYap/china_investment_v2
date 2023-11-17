@@ -3,53 +3,15 @@
 		<mescroll-body ref="mescrollRef" :sticky="true" @init="mescrollInit" :down="{ use: true,auto:false }" :up="upOption"
 		@up="upCallback" @down="downCallback">
 		
-		<!-- <view class="a-mx-3">
-			<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-mt-3 a-bg-primary-lighter a-rounded-1-5">
-				<view class="a-w-690 a-rounded-1-5 a-position-relative a-overflow-hidden">
-					<view  class="a-w-690 a-h-400 a-rounded-1-5 a-rounded-1-5 a-flex a-align-center a-justify-center">
-						<image class="a-w-750 a-rounded-1-5 a-position-absolute" mode="widthFix" :src="item.good_image"></image>
-					</view>
-				</view>
-				<view class="a-p-3">
-					<text class="a-text-ellipsis-1 a-font a-text-blue-rent  a-font-weight-bold">{{item.goods_name}}</text>
-					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-blue-rent-light a-font-sm">{{$t('pro.totalPrice')}}:</text>
-						<text class="a-text-blue-rent-light a-font-sm">{{item.goods_price}} Rs</text>
-					</view>
-					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-blue-rent-light a-font-sm">{{$t('pro.circulation')}}:</text>
-						<text class="a-text-blue-rent-light a-font-sm">{{item.total_day}} Days</text>
-					</view>
-					<view v-if="item.settle_model !=3" class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-blue-rent-light a-font-sm">{{$t('pro.dailyIncome')}}:</text>
-						<text class="a-text-blue-rent-light a-font-sm">{{item.daily_income}} Rs</text>
-					</view>
-					<view class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-blue-rent-light a-font-sm">{{$t('pro.totalIncome')}}:</text>
-						<text class="a-text-blue-rent-light a-font-sm">{{item.total_profit}} Rs</text>
-					</view>
-					<view v-if="item.expire_time" class="a-flex a-align-center a-justify-between a-mt-2">
-						<text class="a-text-blue-rent-light a-font-sm">{{$t('pro.eventcountdown')}}:</text>
-						<view class="a-flex a-justify-between a-align-center">
-							<uni-countdown color="#FFFFFF" background-color="#571fb2" :show-day="false" :hour="$countdown(item.expire_time,'hour')" :minute="$countdown(item.expire_time,'minute')" :second="$countdown(item.expire_time,'second')"></uni-countdown>
-							
-					</view>
-					<view class="a-flex a-justify-center a-mt-3">
-						<view class="a-bg-brown-orange a-rounded-circle a-h-90 a-w-500 a-flex a-align-center a-justify-center">
-							<text class="a-font-lg a-font-weight-bold a-text-brown">{{$t('button.rent')}}</text>
-						</view>
-					</view>
-				</view>
-				
-			</view>
-		</view> -->
+
 		
 		<view class="">
 		
-			<view class="a-flex a-justify-center a-flex-wrap a-rounded-2 a-mt-2 animate__animated animate__backInDown animate__delay-1s
-						
-						">
-				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-primary-op-7-5 ">
+			<view class="a-flex a-justify-center a-flex-wrap a-rounded-2 a-mt-2 animate__animated animate__backInDown animate__delay-1s">
+				<view v-for="(item,index) in list.data" @click="$navTo('pages/rent/articleRent?id='+item.goods_id)" class="a-w-750 a-p-3 a-m-3 activity-card a-rounded-2  a-bg-primary-op-7-5 a-position-relative">
+					<view class="square" style="--i:0"></view>
+					<view class="square" style="--i:1"></view>
+	
 					<text class="a-text-ellipsis-1 a-font-max a-font-weight-bold a-text-white a-mb-2">{{item.goods_name}}</text>
 					<view class="a-flex a-align-center">
 					<view class="a-rounded-2 a-position-relative a-overflow-hidden a-flex a-align-center a-justify-center a-flex-1 ">
